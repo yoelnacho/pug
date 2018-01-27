@@ -1,14 +1,9 @@
 extends layouts/default
 
+block vars
+  -var title = 'Funerama - Home page'
+  -var description = 'Funerama home page'
+  
 block content
   .hero-unit
-    h1 &apos;Allo, &apos;Allo!
-    |       
-    p You now have
-    |       
-    ul
-      li HTML5 Boilerplate
-      |         
-      li Sass
-      |         
-      li Modernizr
+    h1 #{title}

@@ -1,0 +1,112 @@
+/* -----------------------------------------------
+    Scaffolding
+-------------------------------------------------- */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    @extend %ui-full-height;
+
+    background-color: $color-primary;
+    font: {
+        family: $font-primary;
+        size: $font-base-size;
+    }
+    margin: 0;
+    text-rendering: optimizeLegibility;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+a {
+    @extend %link;
+}
+
+button, a {
+    outline: none;
+}
+
+strong {
+    font-weight: 600 !important;
+}
+
+// html:not(.mobile){}
+
+h1 {
+    @extend %heading-1;
+}
+h2 {
+    @extend %heading-2;
+}
+h3 {
+    @extend %heading-3;
+}
+h4 {
+    @extend %heading-4;
+}
+h5 {
+    @extend %heading-5;
+}
+h6 {
+    @extend %heading-6;
+}
+
+p {
+    line-height: $line-height-base;
+}
+
+// h1 {
+//   font-size: calc(1rem + 7vmin);
+//   font-weight: 100;
+// }
+//
+// h2 {
+//   font-size: calc(1rem + 4vmin);
+//   font-weight: 100;
+// }
+//
+// h3 {
+//   font-size: calc(1rem + 3vmin);
+//   font-weight: 100;
+// }
+//
+// h4 {
+//   font-size: calc(1rem + 2vmin);
+//   font-weight: 100;
+// }
+//
+// h5 {
+//   font-size: calc(1rem + 1vmin);
+//   font-weight: 100;
+// }
+//
+// h6 {
+//   font-size: calc(1rem + 0vmin);
+//   font-weight: 100;
+// }
+
+// HR
+.hr {
+    padding: 0;
+    border: 0;
+    height: 1px;
+
+    &-brand {
+        background-color: palette(blue);
+
+        &-30 {
+            background-color: palette(blue, 30);
+        }
+    }
+}
+
+p {
+    @include font-source(null, $font-base-size);
+}

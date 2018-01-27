@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------
+    Mixins
+--------------------------------------------------
+
+// Bourbon mixins
+
+POSITION:
+@include position(relative, 0 null null 10em);
+
+-------------------------------------------------- */
+// Box-shadow
+// @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// Truncate
+@mixin truncate() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Small
+@mixin small($size) {
+    font-size: ($size - 2);
+}
+
+//Link colors
+@mixin link($color, $hover, $underline: false) {
+    color: $color;
+
+    @if $underline {
+        text-decoration: underline;
+    } @else {
+        text-decoration: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active:focus {
+        color: $hover;
+    }
+}
+
+
+// Truncate by lines
+// How to use @include tuncate-line(2);
+@mixin tuncate-line($value) {
+    display: -webkit-box;
+    -webkit-line-clamp: $value;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+// V-align
+@mixin v-align(){
+    display: table;
+    width: 100%;
+
+    @content;
+
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+@mixin vertical-align($position: absolute) {
+    @include transform(translateY(-50%));
+
+    position: $position;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+// Example @include calc(width, "100% - 60px")
+// Example with vars: @include calc(width, "100% - " ($space-medium * 2));
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+// mediaqueries
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// Orientation
+@mixin orientation($orientation: landscape) {
+    @media (orientation: $orientation) {
+        @content;
+    }
+}
+
+// Aspect ratio
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: ($height / $width) * 100%;
+        width: 100%;
+    }
+
+    > img {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+// Fonts
+// @include font-source(Arial, 16px, 500, 1, red);
+@mixin font-source($family: $font-primary, $size: false, $weight: false,  $lh: false, $color: false) {
+    font-family: $family;
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+    @if $color { color: $color; }
+}
+
+// Placeholder
+@mixin placeholder($color) {
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+}
+
+/// Provides a quick method for setting an element’s position. Use a `null` value to “skip” a side.
+///
+/// @param {Position} $position [relative]
+///   A CSS position value
+///
+/// @param {Arglist} $coordinates [null null null null]
+///   List of values that correspond to the 4-value syntax for the edges of a box
+///
+/// @example scss - Usage
+///   .element {
+///     @include position(absolute, 0 null null 10em);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     left: 10em;
+///     position: absolute;
+///     top: 0;
+///   }
+///
+/// @require {function} is-length
+/// @require {function} unpack
+@mixin position($position: relative, $coordinates: null null null null) {
+    @if type-of($position)==list {
+        $coordinates: $position;
+        $position: relative;
+    }
+    $coordinates: unpack($coordinates);
+    $offsets: ( top : nth($coordinates, 1), right : nth($coordinates, 2), bottom: nth($coordinates, 3), left : nth($coordinates, 4));
+    position: $position;
+    @each $offset,
+    $value in $offsets {
+        @if is-length($value) {
+            #{$offset}: $value;
+        }
+    }
+}
+

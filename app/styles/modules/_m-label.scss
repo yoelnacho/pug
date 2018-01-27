@@ -1,0 +1,77 @@
+[data-label]{
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -($size-sm);
+    }
+    // colors
+    &[data-label~="primary"]{
+        &::after {
+            background-color: unquote("rgb(#{$palette-fune-primary-500})");
+        }
+    }
+    &[data-label~="dark"]{
+        &::after {
+            background-color: unquote("rgb(#{$palette-fune-dark-500})");
+        }
+    }
+    &[data-label~="accent"]{
+        &::after {
+            background-color: unquote("rgb(#{$palette-fune-accent-500})");
+        }
+    }
+
+    // Position
+    &[data-label~="left"]{
+        &::after {
+            left: 0;
+        }
+    }
+    &[data-label~="right"] {
+        &::after {
+            right: 0;
+        }
+    }
+    &[data-label~="center"]{
+        &::after {
+            left: 15%;
+            right: 15%;
+        }
+    }
+
+    // Height
+    &[data-label~="sm"] {
+        &::after {
+            height: 2px;
+        }
+    }
+    &[data-label~="md"] {
+        &::after {
+            height: 4px;
+        }
+    }
+
+    // Sizes
+    &[data-label~="25"] {
+        &::after {
+            width: 25%;
+        }
+    }
+    &[data-label~="50"] {
+        &::after {
+            width: 50%;
+        }
+    }
+    &[data-label~="75"] {
+        &::after {
+            width: 75%;
+        }
+    }
+    &[data-label~="112"] {
+        &::after {
+            width: 112px;
+        }
+    }
+}

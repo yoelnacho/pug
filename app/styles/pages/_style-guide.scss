@@ -1,0 +1,92 @@
+/* -----------------------------------------------
+    Style Guide
+-------------------------------------------------- */
+
+.p-guide {
+    .mdl-layout {
+        align-items: center;
+    }
+    hr {
+        margin-top: 0;
+    }
+    label {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .heading {
+        margin-bottom: 5px;
+    }
+
+    // sections
+    .typography {
+        &-light {
+            font-size: 300;
+        }
+        &-regular {
+            font-size: 400;
+        }
+        &-bold {
+            font-size: 700;
+        }
+        &-glyph {
+            font-size: 144px;
+        }
+        &-characters {
+            line-height: 1.5;
+            font-size: 30px;
+        }
+        &-styles {
+            font-size: 45px;
+        }
+
+    }
+
+}
+
+// .demo-page--palette.demo-preview-block {
+//     display: inline-block;
+//     width: 100%;
+// }
+
+// .demo-palette {
+//     margin-top: 15px;
+//     width: 30%;
+//     padding: 0 3% 0 0;
+//     float: left;
+// }
+
+// @media screen and (max-width: 360px) {
+//     .demo-palette {
+//         width: 272px;
+//     }
+// }
+
+.demo-palette-color,
+.demo-palette-heading {
+    // max-width: 300px;
+    padding: 15px;
+    color: white;
+}
+
+.demo-palette .demo-palette--dark-text,
+.demo-palette-heading.demo-palette--dark-text .demo-palette-name {
+    color: #000;
+}
+
+.demo-palette-name {
+    padding: 0 0 60px 0;
+}
+
+.demo-palette-single {
+    padding: 15px 15px 25px;
+}
+
+.demo-palette-single .demo-palette-name {
+    padding: 0;
+    float: left;
+}
+
+

@@ -1,0 +1,59 @@
+/* -----------------------------------------------
+    Settings
+-------------------------------------------------- */
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Open+Sans:300,400,700');
+
+
+$font-primary:        'Open Sans', sans-serif; //  400 / 700
+$font-secondary:      'Libre Baskerville', serif; // 300 / 400 / 700
+$font-base-size:      14px;
+$line-height-base:    1.5;
+
+
+// Breakpoint
+$breakpoints: (
+    "phone":          400px,
+    "phone-wide":     480px,
+    "phablet":        560px,
+    "tablet-small":   640px,
+    "tablet":         769px,
+    "tablet-wide":    1024px,
+    "desktop":        1200px,
+    "desktop-wide":   1500px,
+    "desktop-wide-m": 1520px
+);
+
+// Sizes
+$size-xs:                       8px;
+$size-sm:                       16px;
+$size-md:                       24px;
+$size-lg:                       32px;
+$size-xl:                       48px;
+
+$height-xs:                     $size-xs;
+$height-sm:                     $size-sm;
+$height-md:                     $size-md;
+$height-lg:                     $size-lg;
+$height-xl:                     $size-xl;
+
+// Logo
+$logo:                         100px;
+$logo-iso:                     38px;
+
+// Z-index
+$z-base:                       1;
+$z-base-xs:                    ($z-base * 10);
+$z-banner:                     ($z-base-xs * 1.1);
+$z-nav:                        ($z-base-xs * 1.5); // nav mobile
+$z-detail-nav:                 ($z-base-xs * 2);
+$z-modal:                      ($z-base-xs * 10);
+
+// layouts
+$header-height:                ($size-md *2);
+$header-min-height:            300px;
+
+// tag target js
+$htmltag:                      'body';
+

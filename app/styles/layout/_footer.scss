@@ -1,0 +1,22 @@
+[data-footer] {
+    padding: 60px 40px 80px;
+
+    .mdl-mega-footer--link-list {
+        @extend .ui-margin-bottom-none;
+
+        li {
+            display: inline-block;
+            margin-right: 5px;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &, & li {
+        @extend .mdl-color-text--white;
+
+        font-size: 12px;
+    }
+}

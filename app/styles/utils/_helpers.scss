@@ -1,0 +1,25 @@
+/* -----------------------------------------------
+    Helpers
+------------------------------------------------- */
+.brand,
+a.brand {
+    color: $color-brand;
+}
+
+.c-primary,
+a.c-primary {
+    color: $color-primary;
+}
+
+.c-secondary,
+a.c-secondary {
+    color: $color-brand;
+}
+
+// trucate
+.truncate {
+    @include truncate;
+}
+.no-truncate {
+    white-space: normal;
+}

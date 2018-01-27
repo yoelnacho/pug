@@ -1,0 +1,16 @@
+/* -----------------------------------------------
+    Animations
+-------------------------------------------------- */
+
+.animated {
+    @include animation(fadeIn 0.5s both);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

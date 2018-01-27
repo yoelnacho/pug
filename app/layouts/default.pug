@@ -1,42 +1,56 @@
+- var language = 'en'
+- var title = 'Welcome to Funerama'
+
+block vars
+
 doctype html
-html.no-js(lang='')
+html.no-js(lang=`${language}`)
   head
     meta(charset='utf-8')
-    |     
-    meta(name='description', content='')
-    |     
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    |     
-    title pug
-    |     
-    link(rel='apple-touch-icon', href='apple-touch-icon.png')
-    // Place favicon.ico in the root directory
-    // build:css styles/vendor.css
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content=description ? description : 'Funerama description.')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |    
+    title #{title}
+    |
+    link(rel='manifest', href='manifest.json')
+    link(rel='apple-touch-icon', href='images/icons/icon-152x152.png')
+    link(rel='shortcut icon', href='favicon.ico')
+    link(rel='icon', sizes='192x192', href='images/icons/icon-192x192.png')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    |
+    // build:css styles/vendor.min.css
     // bower:css
+    link(rel='stylesheet', href='/bower_components/material-design-lite/material.min.css')
     // endbower
     // endbuild
-    // build:css styles/main.css
+    |
+    // build:css styles/main.min.css
     link(rel='stylesheet', href='styles/main.css')
     // endbuild
-    // build:js scripts/vendor/modernizr.js
-    script(src='/bower_components/modernizr/modernizr.js')
-    // endbuild
-  |   
-  body
-    //if IE
-      p.browserupgrade
-        | You are using an 
-        strong outdated
-        |  browser. Please 
-        a(href='http://browsehappy.com/') upgrade your browser
-        |  to improve your experience.
-    |     
-    |     
-    
-    block content
-    
+
+    meta(name='msapplication-tap-highlight', content='no')
+    meta(name='mobile-web-app-capable', content='yes')   
+    meta(name='application-name', content='MDL Starter Kit')   
+    meta(name='apple-mobile-web-app-capable', content='yes')  
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')  
+    meta(name='apple-mobile-web-app-title', content='MDL Starter Kit')  
+    meta(name='msapplication-TileImage', content='images/icons/icon-144x144.png') 
+    meta(name='msapplication-TileColor', content='#2F3BA2')
+    meta(name='theme-color', content='#2F3BA2')
+
+  body(class=body ? body : 'p-home')
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+
+      include header.pug
+      
+      block content
+      
+      include footer.pug
+
     // build:js scripts/vendor.js
     // bower:js
+    script(src='/bower_components/material-design-lite/material.min.js')
     script(src='/bower_components/modernizr/modernizr.js')
     // endbower
     // endbuild

@@ -1,0 +1,183 @@
+/* -----------------------------------------------
+    Buttons
+-------------------------------------------------- */
+
+[data-btn] {
+
+    &:not([data-btn~="hamburger"]){
+        @include transition(background-color 0.3s ease-in-out);
+
+        border: {
+            width: 1px;
+            style: solid;
+        }
+        display: inline-block;
+        cursor: pointer;
+        font: {
+            weight: 700;
+        }
+        padding: 17px 22px;
+        text-transform: uppercase;
+
+        &:disabled {
+            cursor: auto;
+            opacity: 0.5;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// Type transparent
+[data-btn~="primary"] {
+    background-color: palette(blue);
+    border-color: palette(blue);
+    color: $color-primary;
+
+    &[data-btn~="inv"] {
+        border-color: $color-primary;
+    }
+
+    &[data-btn~="inv"]:not([disabled]) {
+        &:hover,
+        &.hover {
+            background-color: $color-primary;
+            color: $color-brand;
+        }
+    }
+
+    &:not([disabled]):not([data-btn~="inv"]) {
+        &:hover,
+        &.hover {
+            background-color: palette(blue, 70);
+            border-color: $color-brand;
+            color: $color-primary;
+        }
+    }
+}
+
+[data-btn~="secondary"] {
+    background-color: palette(gray, 30);
+    border-color: palette(blue);
+    color: $color-brand;
+
+    &[data-btn~="inv"] {
+        background-color: palette(blue);
+        border-color: palette(blue, 70);
+        color: palette(blue, 70);
+    }
+
+    &[data-btn~="inv"]:not([disabled]) {
+        &:hover,
+        &.hover {
+            background-color: palette(blue, 70);
+            color: palette(blue, 30);
+        }
+    }
+
+    &:not([disabled]):not([data-btn~="inv"]) {
+        &:hover,
+        &.hover {
+            background-color: palette(blue, 30);
+            color: $color-primary;
+        }
+    }
+}
+
+
+// Hamburger
+[data-btn~="hamburger"] {
+    @include transform(rotate(0));
+    @include transition(.5s ease-in-out);
+    @extend %ui-reset-button;
+    @extend %ui-right;
+    @extend %ui-relative;
+
+    display: block;
+    cursor: pointer;
+    height: $logo-iso;
+    margin: {
+        top: 14px;
+        right: $size-sm;
+    }
+    padding: ($size-xs / 2);
+    width: $logo-iso;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    > span {
+        @include border-top-radius(5px);
+        @include border-bottom-radius(5px);
+        @include position(absolute, 0 0 null null);
+        @include transform(rotate(0));
+        @include transition(.25s ease-in-out);
+        @extend %ui-full-width;
+
+        display: block;
+        background: $color-brand;
+        height: 3px;
+        opacity: 1;
+
+        &:nth-child(1) {
+          top: 5px;
+        }
+
+        &:nth-child(2) {
+          top: ($height-xs + 5);
+        }
+
+        &:nth-child(3) {
+          top: ($height-sm + 5);
+        }
+    }
+
+    &.js-open {
+        > span {
+            &:nth-child(1) {
+                @include transform(rotate(135deg));
+
+                top: ($height-xs + 5);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                @include transform(rotate(-135deg));
+
+                top: ($height-xs + 5);
+            }
+        }
+    }
+
+    &[data-btn~="detail"]{
+        @include transition(none);
+
+        margin-top: ($size-xs + 3);
+    }
+
+    @include mq('tablet') {
+        margin-top: $size-sm;
+
+        &[data-btn~="detail"]{
+            margin-top: ($size-sm + 3);
+        }
+
+        &:not([data-btn~="detail"]){
+            display: none;
+        }
+    }
+}
+
+// Size
+[data-btn~="block"] {
+    @extend %ui-full-width;
+    @extend %block;
+}

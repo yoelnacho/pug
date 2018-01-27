@@ -1,0 +1,107 @@
+/* -----------------------------------------------
+    Form
+-------------------------------------------------- */
+$form-input-margin: $size-xs;
+
+[data-form] {
+    fieldset {
+        @extend %ui-border-none;
+        @extend %ui-padding-none;
+    }
+
+    input,
+    select,
+    textarea {
+        @extend %ui-full-width;
+
+        background-color: transparent;
+        display: inline-block;
+        border: {
+            width: 1px;
+            style: solid;
+            color: palette(gray, 70);
+        }
+        color: $color-secondary;
+        outline-color: $color-brand;
+        padding: 15px $size-xs;
+        margin-bottom: $form-input-margin;
+
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+
+    [type="reset"],
+    [type="submit"] {
+        @extend %ui-margin-bottom-sm;
+    }
+
+    textarea {
+        resize: none;
+
+        &.textarea-1 {
+            min-height: (48px);
+        }
+
+        &.textarea-2 {
+            min-height: (48px * 2) + ($size-xs * 1);
+        }
+
+        &.textarea-3 {
+            min-height: (48px * 3) + ($size-xs * 2);
+        }
+
+        &.textarea-4 {
+            min-height: (48px * 4) + ($size-xs * 3);
+        }
+    }
+
+    // FileUpload
+    .input {
+        &-upload {
+            @include position();
+
+            > input {
+                padding-right: ($size-sm + $size-lg);
+            }
+
+            > span {
+                @include position(absolute, 0 0 null null);
+                @extend %ui-text-center;
+
+                background: {
+                    color: $color-brand;
+                    image: url('/assets/icons/page.svg');
+                    repeat: no-repeat;
+                    position: center;
+                    size: 30%;
+                }
+                color: $color-primary;
+                height: 48px;
+                width: $size-lg;
+            }
+        }
+    }
+
+    .has-error {
+        @include placeholder(palette(system, error));
+        @extend %ui-error-bo;
+        @extend %ui-error-co;
+
+        &:focus {
+            outline-color: palette(system, error);
+        }
+    }
+
+    .has-warning {
+        @include placeholder(palette(system, warning));
+        @extend %ui-warning-bo;
+        @extend %ui-warning-co;
+    }
+
+    .has-success {
+        @include placeholder(palette(system, success));
+        @extend %ui-success-bo;
+        @extend %ui-success-co;
+    }
+}

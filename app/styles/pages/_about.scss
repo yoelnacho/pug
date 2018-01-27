@@ -1,0 +1,14 @@
+.p-about {
+    &-photo {
+        @extend .ui-img-4x3;
+        @extend .ui-overflow;
+
+        background: {
+            image: url('../images/pages/about/image.png');
+            repeat: no-repeat;
+            position: center ;
+            size: cover;
+        }
+        max-height: 324px;
+    }
+}

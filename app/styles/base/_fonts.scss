@@ -1,0 +1,62 @@
+/* -----------------------------------------------
+    Fonts
+-------------------------------------------------- */
+
+
+// Thin:    100
+// Light:   300
+// Regular: 400
+// Medium:  500
+// Bold:    700
+
+%heading-base {
+    font-weight: 300;
+}
+
+%heading-1 {
+    @extend %heading-base;
+
+    font-size: torem(54px);
+    line-height: 1;
+}
+%heading-2 {
+    @extend %heading-base;
+
+    font-size: torem(42px);
+    line-height: 1;
+
+    @include mq('tablet', max) {
+        font-size: torem(30px);
+    }
+}
+%heading-3 {
+    @extend %heading-base;
+
+    font-size: torem(30px);
+
+    @include mq('tablet', max) {
+        font-size: torem(18px);
+    }
+}
+%heading-4 {
+    @extend %heading-base;
+
+    font: {
+        size: torem(21px);
+        weight: 300;
+    }
+}
+%heading-5 {
+    @extend %heading-base;
+
+    font-size: torem(18px);
+
+    @include mq('tablet', max) {
+        font-size: torem(14px);
+    }
+}
+%heading-6 {
+    @extend %heading-base;
+
+    font-size: torem(16px);
+}

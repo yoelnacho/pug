@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------
+    Functions
+-------------------------------------------------- */
+
+// TO EM --- toem()
+@function toem($target, $context: $font-base-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+
+// TO REM --- torem(48)
+@function torem($target, $context: $font-base-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0rem;
+}
+
+// BREAKPOINT --- breakpoint('desktop');
+@function breakpoint($breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+}
+
+
+/// Converts shorthand to the 4-value syntax.
+///
+/// @param {List} $shorthand
+///
+/// @example scss - Usage
+///   .element {
+///     margin: unpack(1em 2em);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     margin: 1em 2em 1em 2em;
+///   }
+@function unpack($shorthand) {
+    @if length($shorthand)==1 {
+        @return nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1);
+    }
+    @else if length($shorthand)==2 {
+        @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 1) nth($shorthand, 2);
+    }
+    @else if length($shorthand)==3 {
+        @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 3) nth($shorthand, 2);
+    }
+    @else {
+        @return $shorthand;
+    }
+}
+
+/// Checks for a valid CSS length.
+///
+/// @param {String} $value
+@function is-length($value) {
+    @return type-of($value) !="null" and (str-slice($value + "", 1, 4)=="calc" or index(auto inherit initial 0, $value) or (type-of($value)=="number" and not(unitless($value))));
+}
+
+
