@@ -1,0 +1,377 @@
+extends layouts/default
+
+block vars
+  -var title = 'Funerama - Style guide'
+  -var description = 'Funerama style guide'
+  -var body = 'p-guide'
+  -var styleGuide = true
+  
+block content
+  // Logotype
+  section.mdl-grid
+    h1.mdl-typography--display-4.ui-font-primary Style Guide                 
+    .mdl-cell.mdl-cell--12-col
+      hr                     
+      h3.ui-font-primary
+        strong Logotype                     
+      svg(width='250px', viewBox='0 0 225 105', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+        defs                         
+        g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd')
+          g#styleguide-dashboard(transform='translate(-42.000000, -249.000000)', fill-rule='nonzero')
+            g#logo-hor-copy-4(transform='translate(42.000000, 249.000000)')
+              g#isologotipo
+                g(id='logo-/-iso', transform='translate(85.909091, 0.000000)')
+                  g#isotipo(transform='translate(0.483314, 0.000000)')
+                    path#Shape(d='M22.8384968,62.4241614 L22.0915348,61.7210601 C22.0373734,61.6702215 16.5743829,56.5115981 11.1452848,49.335712 C3.82087025,39.6531171 0.106661392,31.1667247 0.106661392,24.1127848 L0.106661392,22.8986392 C0.106661392,10.4252373 10.3036234,0.277120253 22.8378323,0.277120253 C28.335712,0.277120253 33.6412025,2.25583861 37.7764082,5.8490981 L37.858481,5.94014241 C38.126962,6.32492089 38.2130222,6.93332278 37.7687658,7.35996835 C37.5674051,7.55501582 37.3152057,7.65868671 37.0407437,7.65868671 C36.7038133,7.65868671 36.4482911,7.49985759 36.4001108,7.46829114 L36.3492722,7.42941456 C32.6054905,4.1784019 27.807057,2.38808544 22.8378323,2.38808544 C11.4918513,2.38808544 2.26082278,11.5888766 2.26082278,22.8986392 L2.26082278,24.1127848 C2.26082278,30.2439873 5.40151899,37.7136076 11.5955222,46.3136392 C16.1364399,52.6186234 20.9973418,57.6406804 22.8378323,59.470538 C24.6773259,57.6416772 29.5365665,52.6212816 34.0804747,46.3116456 C40.2744778,37.7109494 43.4151741,30.2419937 43.4151741,24.1124525 L43.4175,24.0649367 C43.4513924,23.7127215 43.767057,23.1890506 44.4993987,23.1890506 C45.2443671,23.1890506 45.5457437,23.724019 45.5666772,24.0835443 C45.5676741,31.1663924 41.8537975,39.6527848 34.5290506,49.3353797 C29.1002848,56.5109335 23.636962,61.6702215 23.5824684,61.7213924 L22.8384968,62.4241614 Z', fill='#25394B')                                                 
+                    g#Group(transform='translate(15.284810, 6.645570)', fill='#25394B')
+                      path#Shape(d='M13.163212,0.590126582 C12.6375475,3.02240506 10.9691772,4.96723101 8.67612342,5.62713608 C9.54602848,4.73297468 10.1354905,3.18887658 10.4292247,2.34787975 C10.6332437,1.75941456 9.70286392,1.50887658 9.49884494,2.09169304 C9.20677215,2.9277057 8.58308544,4.65422468 7.64971519,5.18852848 L7.64971519,0.767231013 C7.64971519,0.145870253 6.68677215,0.145870253 6.68677215,0.767231013 L6.68677215,5.22973101 C5.78596519,4.73397152 5.08219937,2.80243671 4.83598101,2.09169304 C4.63196203,1.50887658 3.70158228,1.75941456 3.90560127,2.34787975 C4.27775316,3.41083861 4.87518987,4.91871835 5.85275316,5.7364557 C3.46466772,5.18886076 1.68564873,2.97655063 1.16962025,0.590126582 C1.03903481,-0.0176107595 0.110316456,0.239905063 0.240901899,0.846313291 C0.938022152,4.06675633 3.44506329,6.47278481 6.68643987,6.79509494 L6.68643987,15.1648576 C6.68643987,15.7862184 7.64938291,15.7862184 7.64938291,15.1648576 L7.64938291,6.82300633 C10.8731487,6.67181962 13.4306962,3.91257911 14.0935918,0.84664557 C14.2245095,0.239905063 13.2954589,-0.0176107595 13.163212,0.590126582 Z')                                                     
+                      path#Shape(d='M1.16962025,35.1351266 C1.69528481,32.7025158 3.36498418,30.7573576 5.65837025,30.0974525 C4.78846519,30.9919462 4.19900316,32.5353797 3.90560127,33.3767089 C3.70158228,33.9651741 4.63196203,34.2160443 4.83598101,33.6332278 C5.1280538,32.7972152 5.75174051,31.0703639 6.68511076,30.5360601 L6.68511076,34.9573576 C6.68511076,35.5790506 7.6480538,35.5790506 7.6480538,34.9573576 L7.6480538,30.4951899 C8.54886076,30.9906171 9.25096519,32.9224842 9.50050633,33.6332278 C9.70286392,34.2160443 10.6332437,33.9651741 10.4292247,33.3767089 C10.0570728,32.3140823 9.45963608,30.8065348 8.48207278,29.9878006 C10.8701582,30.5353956 12.6475158,32.748038 13.163212,35.1351266 C13.2951266,35.7418671 14.2241772,35.4846835 14.0935918,34.8786076 C13.3964715,31.6581646 10.8894304,29.2521361 7.6480538,28.9301582 L7.6480538,20.5600633 C7.6480538,19.9390348 6.68511076,19.9390348 6.68511076,20.5600633 L6.68511076,28.9015823 C3.46134494,29.0531013 0.903797468,31.8130063 0.240901899,34.8786076 C0.110316456,35.4846835 1.03903481,35.7418671 1.16962025,35.1351266 Z')                                                 
+                    path#Shape(d='M4.49506329,27.9506013 C6.86487342,27.1896835 9.3835443,27.6618513 11.1024209,29.3182595 C9.89292722,29.0125633 8.26077532,29.2743987 7.3855538,29.440538 C6.77349684,29.5568354 7.02170886,30.4885443 7.62712025,30.3739082 C8.49702532,30.2084335 10.3039557,29.8854589 11.2359968,30.4274051 C9.95938291,31.1643987 8.68310127,31.9013924 7.40681962,32.6377215 C6.8681962,32.9490665 7.34966772,33.7830854 7.88829114,33.4727373 C9.17620253,32.7287658 10.4637816,31.9851266 11.751693,31.2414873 C11.7729589,32.2685601 10.4524842,33.8428956 9.95938291,34.4134177 C9.55799051,34.8809335 10.2401582,35.5621044 10.6465348,35.0899367 C11.3808703,34.2369778 12.3880063,32.9653481 12.608307,31.71 C13.3283544,34.0518987 12.2999525,36.6978323 10.4913608,38.3382911 C10.0311551,38.7553006 10.718307,39.4311551 11.1785127,39.0148101 C13.6187658,36.8015032 14.4478006,33.4265506 13.1077215,30.4589715 C15.5233861,29.0637342 17.9393829,27.6691614 20.3563766,26.2739241 C20.8933386,25.9632437 20.4118671,25.1288924 19.8749051,25.4392405 C17.4658861,26.8301582 15.0581962,28.2200791 12.6488449,29.6103323 C10.9073734,26.894288 7.23802215,26.0586076 4.25117089,27.0178956 C3.66237342,27.2076266 3.90427215,28.1403323 4.49506329,27.9506013 Z', fill='#25394B')                                                 
+                    g#Group(transform='translate(3.655063, 4.984177)')
+                      path#Shape(d='M6.83662975,5.69425633 C8.68110759,7.36528481 9.53140823,9.78294304 8.95523734,12.0985918 C8.61598101,10.8990665 7.57262658,9.61713608 6.9918038,8.9419462 C6.58542722,8.46977848 5.90325949,9.15128165 6.3046519,9.61846519 C6.88248418,10.2896677 8.06606013,11.6935443 8.06273734,12.7691297 C6.78612342,12.0324684 5.50984177,11.295807 4.23356013,10.5588133 C3.69493671,10.2481329 3.21346519,11.0831487 3.75208861,11.3931646 C5.04,12.1371361 6.32757911,12.8811076 7.61549051,13.6244146 C6.73727848,14.1560601 4.71170886,13.7985285 3.97238924,13.658307 C3.36697785,13.5433386 3.11876582,14.4750475 3.72916139,14.5913449 C4.83731013,14.8013449 6.4405538,15.0375949 7.63841772,14.5996519 C5.97004747,16.394288 3.16594937,16.8272468 0.840332278,16.0809494 C0.249541139,15.8915506 0.00797468354,16.8239241 0.59710443,17.0139873 C3.73580696,18.0214557 7.07221519,17.0521994 8.97218354,14.4072627 C11.3878481,15.8025 13.8038449,17.1967405 16.2195095,18.5919778 C16.7581329,18.9029905 17.2396044,18.0689715 16.7026424,17.7579589 C14.2936234,16.3677057 11.8859335,14.976788 9.47824367,13.5871994 C10.9585443,10.7196361 9.84873418,7.12471519 7.5244462,5.01740506 C7.06357595,4.60106013 6.37642405,5.27658228 6.83662975,5.69425633 Z', fill='#25394B')                                                     
+                      path#Shape(d='M41.795981,1.04268987 C39.9515032,2.71405063 39.1012025,5.13137658 39.6773734,7.44702532 C40.0166297,6.24783228 41.0596519,4.96556962 41.640807,4.29037975 C42.0475158,3.81887658 42.7293513,4.49971519 42.3279589,4.96756329 C41.7501266,5.63843354 40.5665506,7.04231013 40.5698734,8.11822785 C41.8464873,7.38156646 43.122769,6.64457278 44.3990506,5.90791139 C44.9376741,5.59689873 45.4191456,6.43191456 44.8805222,6.74193038 C43.5926108,7.48623418 42.3046994,8.22987342 41.0171203,8.97318038 C41.8953323,9.50482595 43.9205696,9.14762658 44.6585601,9.00740506 C45.2656329,8.89177215 45.5138449,9.82414557 44.9031171,9.94044304 C43.7949684,10.1501108 42.1903956,10.386693 40.9938608,9.94841772 C42.662231,11.7430538 45.4663291,12.1760127 47.7922785,11.4300475 C48.3830696,11.2403165 48.6246361,12.1730222 48.0338449,12.3624209 C44.8968038,13.3698892 41.5607278,12.4009652 39.6607595,9.75602848 C37.2447627,11.1509335 34.8290981,12.5455063 32.4134335,13.9404114 C31.8748101,14.2517563 31.3933386,13.4174051 31.9303006,13.1067247 C34.3393196,11.715807 36.7470095,10.3252215 39.1543671,8.93563291 C37.6740665,6.06806962 38.7838766,2.47314873 41.1081646,0.366170886 C41.5693671,-0.0505063291 42.256519,0.62568038 41.795981,1.04268987 Z', fill='#82A8B5')                                                     
+                      path#Shape(d='M30.7570253,33.3537816 C28.9125475,31.6824209 28.0622468,29.2644304 28.6384177,26.9484494 C28.9776741,28.148307 30.0210285,29.4309019 30.6018513,30.1050949 C31.0085601,30.5772627 31.6903956,29.8967563 31.2890032,29.4292405 C30.7111709,28.7583703 29.5275949,27.3541614 29.5309177,26.2782437 C30.8075316,27.0149051 32.0841456,27.7518987 33.3600949,28.4885601 C33.8987184,28.7999051 34.3801899,27.964557 33.8415665,27.6535443 C32.5536551,26.9102373 31.2660759,26.1669304 29.9781646,25.4232911 C30.8577057,24.8916456 32.8799525,25.2485127 33.6212658,25.3893987 C34.2266772,25.5043671 34.4748892,24.5726582 33.8628323,24.456693 C32.7563449,24.2463608 31.1517722,24.0097785 29.9552373,24.4480538 C31.6236076,22.6530854 34.4293671,22.2204589 36.7536551,22.9667563 C37.3444462,23.1564873 37.5860127,22.2234494 36.9952215,22.0333861 C33.8581804,21.0259177 30.5221044,21.9951741 28.6221361,24.6401108 C26.2061392,23.2448734 23.7888133,21.8506329 21.3731487,20.4553956 C20.8361867,20.1443829 20.3530538,20.9793987 20.8916772,21.2894146 C23.3006962,22.68 25.7083861,24.0699209 28.1157437,25.4605063 C26.635443,28.3284019 27.7452532,31.9229905 30.0695411,34.0299684 C30.5304114,34.4463133 31.2159019,33.7707911 30.7570253,33.3537816 Z', fill='#25394B')                                         
+                g#Group(transform='translate(0.000000, 63.465190)', fill='#25394B')
+                  path#Shape(d='M8.23651899,4.75723101 C7.41612342,5.63045886 7.00642405,6.75821203 7.00642405,8.14015823 L7.00642405,15.0704905 L12.9003797,15.0704905 L12.9003797,18.4534177 L7.00642405,18.4534177 L7.00642405,40.6070886 L3.29653481,40.6070886 L3.29653481,18.4534177 L0.0245886076,18.4534177 L0.0245886076,15.0704905 L3.29653481,15.0704905 L3.29653481,8.14015823 C3.29653481,5.77666139 4.05080696,3.83947785 5.5603481,2.32960443 C7.06988924,0.819731013 9.00773734,0.0641297468 11.3725633,0.0641297468 L12.9003797,0.0641297468 L12.9003797,3.44871835 L11.3725633,3.44871835 C10.0996044,3.44838608 9.05359177,3.88466772 8.23651899,4.75723101 Z')                                             
+                  path#Shape(d='M40.1834335,15.0704905 L40.1834335,40.6070886 L36.4718829,40.6070886 L36.4718829,36.3515981 C35.6003165,37.9880696 34.4446519,39.2527215 33.0092089,40.1442247 C31.570443,41.034731 29.9053956,41.4803165 28.0153956,41.4803165 C26.2330538,41.4803165 24.5869462,41.1161392 23.0780696,40.3901108 C21.5665348,39.6630854 20.3670095,38.5888291 19.4758386,37.1706646 C18.5846677,35.7515032 18.1390823,34.0781487 18.1390823,32.1509335 L18.1390823,15.0711551 L21.8493038,15.0711551 L21.8493038,30.5137975 C21.8493038,35.5707437 24.1051424,38.0990506 28.6164873,38.0990506 C31.2345095,38.0990506 33.2006013,37.1709968 34.5087816,35.3158861 C35.8196203,33.4601108 36.4725475,30.9693513 36.4725475,27.8396203 L36.4725475,15.0711551 L40.1834335,15.0711551 L40.1834335,15.0704905 Z')                                             
+                  path#Shape(d='M64.9837025,15.289462 C66.4929114,16.0164873 67.6934335,17.0897468 68.5842722,18.5085759 C69.475443,19.9277373 69.9210285,21.6007595 69.9210285,23.5289715 L69.9210285,40.6070886 L66.2118038,40.6070886 L66.2118038,25.1644462 C66.2118038,20.1091614 63.9549684,17.5808544 59.4452848,17.5808544 C56.8256013,17.5808544 54.8601741,18.5082437 53.5513291,20.364019 C52.2424842,22.2191297 51.5875633,24.7105538 51.5875633,27.8389557 L51.5875633,40.6070886 L47.8773418,40.6070886 L47.8773418,15.0704905 L51.5875633,15.0704905 L51.5875633,19.3266456 C52.4607911,17.6905063 53.6147943,16.4268513 55.0528956,15.5343513 C56.4876741,14.6428481 58.1533861,14.1975949 60.0443829,14.1975949 C61.827057,14.1975949 63.4738291,14.5614399 64.9837025,15.289462 Z')                                             
+                  path#Shape(d='M95.2389873,15.8892247 C97.0947627,17.0163133 98.5491456,18.5537658 99.6054589,20.4992563 C100.659778,22.4464082 101.187104,24.6198418 101.187104,27.0202215 C101.187104,27.7123576 101.169161,28.2393513 101.133275,28.6035285 L80.1246361,28.6035285 C80.2698418,31.2225475 81.1251266,33.4594462 82.6904905,35.3152215 C84.254193,37.1703323 86.3807753,38.0983861 89.0742247,38.0983861 C91.2562975,38.0983861 93.0648892,37.6886867 94.5029905,36.869288 C95.9394304,36.0515506 97.0950949,34.9144937 97.9683228,33.4594462 L100.914636,35.4245411 C99.7151108,37.315538 98.1318038,38.7975 96.168038,39.8717563 C94.2026108,40.9433544 91.8753323,41.4803165 89.1835443,41.4803165 C86.7090665,41.4803165 84.5087184,40.8991614 82.5811709,39.7338608 C80.6516297,38.5698892 79.14375,36.951693 78.0515506,34.877943 C76.9596835,32.8051899 76.4144146,30.4586392 76.4144146,27.8389557 C76.4144146,25.2199367 76.9513766,22.8727215 78.0236392,20.7996361 C79.0962342,18.7268829 80.5878323,17.1083544 82.4994304,15.9437184 C84.4090348,14.7800791 86.5818038,14.1972627 89.0203956,14.1972627 C91.3101266,14.1975949 93.3845411,14.7614715 95.2389873,15.8892247 Z M97.4765506,25.5482278 C97.1127057,22.8926582 96.2231962,20.9003165 94.803038,19.5725316 C93.3845411,18.2457437 91.4553323,17.5811867 89.0200633,17.5811867 C86.6532437,17.5811867 84.7173892,18.3361234 83.2075158,19.845 C81.6976424,21.3548734 80.7430063,23.2558386 80.342943,25.5482278 L97.4765506,25.5482278 Z')                                             
+                  path#Shape(d='M121.227484,14.5793829 L121.227484,17.963307 C120.463576,17.5991297 119.624573,17.4170411 118.716788,17.4170411 C117.151424,17.4170411 115.697373,17.8536551 114.35231,18.7268829 C113.005585,19.6001108 111.923354,20.8634335 111.104288,22.5185127 C110.286551,24.1732595 109.876851,26.1287184 109.876851,28.384557 L109.876851,40.6067563 L106.16663,40.6067563 L106.16663,15.0701582 L109.876851,15.0701582 L109.876851,20.1995411 C110.859399,18.3088766 112.104778,16.8355538 113.614652,15.7802373 C115.124525,14.7242563 116.825127,14.1969304 118.716788,14.1969304 C119.590348,14.1975949 120.426028,14.3245253 121.227484,14.5793829 Z')                                             
+                  path#Shape(d='M147.274794,15.0704905 L147.274794,40.6070886 L143.564573,40.6070886 L143.564573,36.843038 C142.508592,38.2974209 141.219019,39.4351424 139.691535,40.2528797 C138.163718,41.0726108 136.489035,41.4803165 134.670807,41.4803165 C132.232215,41.4803165 130.050142,40.8991614 128.122263,39.7338608 C126.194715,38.5698892 124.684842,36.951693 123.592975,34.877943 C122.502437,32.8051899 121.957168,30.4413608 121.957168,27.7851266 C121.957168,25.1644462 122.492468,22.8285285 123.566725,20.772057 C124.63932,18.7179114 126.13125,17.1086867 128.040854,15.9440506 C129.950459,14.7804114 132.124557,14.1975949 134.561487,14.1975949 C136.415601,14.1975949 138.116535,14.6072943 139.663623,15.4250316 C141.209383,16.2434335 142.508592,17.3981013 143.564573,18.8903639 L143.564573,15.0708228 L147.274794,15.0708228 L147.274794,15.0704905 Z M139.226013,36.7892089 C140.59068,35.915981 141.654968,34.6968513 142.418544,33.1331487 C143.182785,31.5684494 143.564241,29.8033861 143.564241,27.8389557 C143.564241,25.8751899 143.182785,24.1114557 142.418544,22.5460918 C141.654636,20.9823892 140.59068,19.7632595 139.226013,18.8900316 C137.863006,18.0168038 136.307611,17.5808544 134.561155,17.5808544 C132.850918,17.5808544 131.322769,18.0168038 129.978038,18.8900316 C128.631313,19.7632595 127.576661,20.9727532 126.813085,22.5185127 C126.049177,24.0649367 125.667389,25.8206962 125.667389,27.7851266 C125.667389,29.785443 126.049177,31.5684494 126.813085,33.1331487 C127.576994,34.6968513 128.631646,35.915981 129.978038,36.7892089 C131.322769,37.6607753 132.850918,38.0983861 134.561155,38.0983861 C136.307611,38.0983861 137.863006,37.6607753 139.226013,36.7892089 Z')                                             
+                  path#Shape(d='M189.332611,16.6800475 C190.894652,18.3357911 191.678165,20.6188766 191.678165,23.5286392 L191.678165,40.6067563 L187.968275,40.6067563 L187.968275,25.1641139 C187.968275,22.4723259 187.457231,20.5364715 186.438797,19.3532278 C185.420364,18.1713133 184.092911,17.5805222 182.456108,17.5805222 C180.455127,17.5805222 178.899399,18.3543987 177.79125,19.8994937 C176.681108,21.4459177 176.035158,23.5469146 175.853734,26.2024842 L175.853734,40.6070886 L172.143513,40.6070886 L172.143513,25.1644462 C172.143513,22.4726582 171.632468,20.5368038 170.615364,19.3535601 C169.59693,18.1716456 168.268481,17.5808544 166.631345,17.5808544 C164.411392,17.5808544 162.748006,18.5082437 161.638528,20.364019 C160.528386,22.2191297 159.975142,24.7105538 159.975142,27.8389557 L159.975142,40.6070886 L156.263259,40.6070886 L156.263259,15.0704905 L159.975142,15.0704905 L159.975142,19.0538449 C160.810823,17.4894778 161.875111,16.2899525 163.166345,15.4522785 C164.457579,14.6156013 165.941203,14.1972627 167.614225,14.1972627 C169.47,14.1972627 171.087532,14.6983386 172.470142,15.6975 C173.852421,16.6996519 174.817025,18.1264557 175.362294,19.982231 C176.162089,18.1636709 177.253956,16.7448418 178.636566,15.7250791 C180.017184,14.7066456 181.618766,14.1972627 183.438323,14.1972627 C185.802152,14.1975949 187.767247,15.0249684 189.332611,16.6800475 Z')                                             
+                  path#Shape(d='M224.778418,15.0704905 L224.778418,40.6070886 L221.068528,40.6070886 L221.068528,36.843038 C220.012215,38.2974209 218.721313,39.4351424 217.193497,40.2528797 C215.66568,41.0726108 213.992658,41.4803165 212.17443,41.4803165 C209.735839,41.4803165 207.553766,40.8991614 205.625886,39.7338608 C203.696677,38.5698892 202.188465,36.951693 201.096266,34.877943 C200.00606,32.8051899 199.45913,30.4413608 199.45913,27.7851266 C199.45913,25.1644462 199.996092,22.8285285 201.070348,20.772057 C202.142943,18.7179114 203.634541,17.1086867 205.544478,15.9440506 C207.454082,14.7804114 209.62818,14.1975949 212.065111,14.1975949 C213.919225,14.1975949 215.620158,14.6072943 217.167247,15.4250316 C218.713006,16.2434335 220.012215,17.3981013 221.068528,18.8903639 L221.068528,15.0708228 L224.778418,15.0708228 L224.778418,15.0704905 Z M216.729636,36.7892089 C218.093972,35.915981 219.158592,34.6968513 219.922168,33.1331487 C220.686076,31.5684494 221.068196,29.8033861 221.068196,27.8389557 C221.068196,25.8751899 220.686076,24.1114557 219.922168,22.5460918 C219.158259,20.9823892 218.093972,19.7632595 216.729636,18.8900316 C215.365301,18.0168038 213.809573,17.5808544 212.064778,17.5808544 C210.354541,17.5808544 208.826392,18.0168038 207.48,18.8900316 C206.134937,19.7632595 205.080285,20.9727532 204.316377,22.5185127 C203.550807,24.0649367 203.17068,25.8206962 203.17068,27.7851266 C203.17068,29.785443 203.551139,31.5684494 204.316377,33.1331487 C205.080285,34.6968513 206.134937,35.915981 207.48,36.7892089 C208.826392,37.6607753 210.354209,38.0983861 212.064778,38.0983861 C213.809573,38.0983861 215.364968,37.6607753 216.729636,36.7892089 Z')
+  // Primary Font
+  section.mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      hr                     
+      h3.ui-font-primary
+        strong Fonts                     
+      p.ui-margin-none Open sans                     
+      a(href='https://fonts.google.com/specimen/Open+Sans', traget='_blank') https://fonts.google.com/specimen/Open+Sans             
+  section.mdl-grid
+    .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--3-col-desktop
+      hr                     
+      h3.ui-font-primary
+        strong Glyph                     
+      span.typography-glyph Oo                 
+    .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--9-col-desktop
+      div
+        hr                         
+        h3.ui-font-primary
+          strong Characters                         
+        p.typography-characters.ui-font-light
+          | &ZeroWidthSpace;&zwnj;A&ZeroWidthSpace;&zwnj;B&ZeroWidthSpace;&zwnj;C&ZeroWidthSpace;&zwnj;&Ccaron;&ZeroWidthSpace;&zwnj;&Cacute;&ZeroWidthSpace;&zwnj;D&ZeroWidthSpace;&zwnj;&Dstrok;&ZeroWidthSpace;&zwnj;E&ZeroWidthSpace;&zwnj;F&ZeroWidthSpace;&zwnj;G&ZeroWidthSpace;&zwnj;H&ZeroWidthSpace;&zwnj;I&ZeroWidthSpace;&zwnj;J&ZeroWidthSpace;&zwnj;K&ZeroWidthSpace;&zwnj;L&ZeroWidthSpace;&zwnj;M&ZeroWidthSpace;&zwnj;N&ZeroWidthSpace;&zwnj;O&ZeroWidthSpace;&zwnj;P&ZeroWidthSpace;&zwnj;Q&ZeroWidthSpace;&zwnj;R&ZeroWidthSpace;&zwnj;S&ZeroWidthSpace;&zwnj;&Scaron;&ZeroWidthSpace;&zwnj;T&ZeroWidthSpace;&zwnj;U&ZeroWidthSpace;&zwnj;V&ZeroWidthSpace;&zwnj;W&ZeroWidthSpace;&zwnj;X&ZeroWidthSpace;&zwnj;Y&ZeroWidthSpace;&zwnj;Z&ZeroWidthSpace;&zwnj;&Zcaron;&ZeroWidthSpace;&zwnj;a&ZeroWidthSpace;&zwnj;b&ZeroWidthSpace;&zwnj;c&ZeroWidthSpace;&zwnj;&ccaron;&ZeroWidthSpace;&zwnj;&cacute;&ZeroWidthSpace;&zwnj;d&ZeroWidthSpace;&zwnj;&dstrok;&ZeroWidthSpace;&zwnj;e&ZeroWidthSpace;&zwnj;f&ZeroWidthSpace;&zwnj;g&ZeroWidthSpace;&zwnj;h&ZeroWidthSpace;&zwnj;i&ZeroWidthSpace;&zwnj;j&ZeroWidthSpace;&zwnj;k&ZeroWidthSpace;&zwnj;l&ZeroWidthSpace;&zwnj;m&ZeroWidthSpace;&zwnj;n&ZeroWidthSpace;&zwnj;o&ZeroWidthSpace;&zwnj;p&ZeroWidthSpace;&zwnj;q&ZeroWidthSpace;&zwnj;r&ZeroWidthSpace;&zwnj;s&ZeroWidthSpace;&zwnj;&scaron;&ZeroWidthSpace;&zwnj;t&ZeroWidthSpace;&zwnj;u&ZeroWidthSpace;&zwnj;v&ZeroWidthSpace;&zwnj;w&ZeroWidthSpace;&zwnj;x&ZeroWidthSpace;&zwnj;y&ZeroWidthSpace;&zwnj;z&ZeroWidthSpace;&zwnj;&zcaron;&ZeroWidthSpace;&zwnj;&Acy;&ZeroWidthSpace;&zwnj;&Bcy;&ZeroWidthSpace;&zwnj;&Vcy;&ZeroWidthSpace;&zwnj;&Gcy;&ZeroWidthSpace;&zwnj;&#x490;&ZeroWidthSpace;&zwnj;&Dcy;&ZeroWidthSpace;&zwnj;&DJcy;&ZeroWidthSpace;&zwnj;&IEcy;&ZeroWidthSpace;&zwnj;&IOcy;&ZeroWidthSpace;&zwnj;&Jukcy;&ZeroWidthSpace;&zwnj;&ZHcy;&ZeroWidthSpace;&zwnj;&Zcy;&ZeroWidthSpace;&zwnj;&DScy;&ZeroWidthSpace;&zwnj;&Icy;&ZeroWidthSpace;&zwnj;&Iukcy;&ZeroWidthSpace;&zwnj;&YIcy;&ZeroWidthSpace;&zwnj;&Jcy;&ZeroWidthSpace;&zwnj;&Jsercy;&ZeroWidthSpace;&zwnj;&Kcy;&ZeroWidthSpace;&zwnj;&Lcy;&ZeroWidthSpace;&zwnj;&LJcy;&ZeroWidthSpace;&zwnj;&Mcy;&ZeroWidthSpace;&zwnj;&Ncy;&ZeroWidthSpace;&zwnj;&NJcy;&ZeroWidthSpace;&zwnj;&Ocy;&ZeroWidthSpace;&zwnj;&Pcy;&ZeroWidthSpace;&zwnj;&Rcy;&ZeroWidthSpace;&zwnj;&Scy;&ZeroWidthSpace;&zwnj;&Tcy;&ZeroWidthSpace;&zwnj;&TSHcy;&ZeroWidthSpace;&zwnj;&Ucy;&ZeroWidthSpace;&zwnj;&Ubrcy;&ZeroWidthSpace;&zwnj;&Fcy;&ZeroWidthSpace;&zwnj;&KHcy;&ZeroWidthSpace;&zwnj;&TScy;&ZeroWidthSpace;&zwnj;&CHcy;&ZeroWidthSpace;&zwnj;&DZcy;&ZeroWidthSpace;&zwnj;&SHcy;&ZeroWidthSpace;&zwnj;&SHCHcy;&ZeroWidthSpace;&zwnj;&HARDcy;&ZeroWidthSpace;&zwnj;&Ycy;&ZeroWidthSpace;&zwnj;&SOFTcy;&ZeroWidthSpace;&zwnj;&Ecy;&ZeroWidthSpace;&zwnj;&YUcy;&ZeroWidthSpace;&zwnj;&YAcy;&ZeroWidthSpace;&zwnj;&acy;&ZeroWidthSpace;&zwnj;&bcy;&ZeroWidthSpace;&zwnj;&vcy;&ZeroWidthSpace;&zwnj;&gcy;&ZeroWidthSpace;&zwnj;&#x491;&ZeroWidthSpace;&zwnj;&dcy;&ZeroWidthSpace;&zwnj;&djcy;&ZeroWidthSpace;&zwnj;&iecy;&ZeroWidthSpace;&zwnj;&iocy;&ZeroWidthSpace;&zwnj;&jukcy;&ZeroWidthSpace;&zwnj;&zhcy;&ZeroWidthSpace;&zwnj;&zcy;&ZeroWidthSpace;&zwnj;&dscy;&ZeroWidthSpace;&zwnj;&icy;&ZeroWidthSpace;&zwnj;&iukcy;&ZeroWidthSpace;&zwnj;&yicy;&ZeroWidthSpace;&zwnj;&jcy;&ZeroWidthSpace;&zwnj;&jsercy;&ZeroWidthSpace;&zwnj;&kcy;&ZeroWidthSpace;&zwnj;&lcy;&ZeroWidthSpace;&zwnj;&ljcy;&ZeroWidthSpace;&zwnj;&mcy;&ZeroWidthSpace;&zwnj;&ncy;&ZeroWidthSpace;&zwnj;&njcy;&ZeroWidthSpace;&zwnj;&ocy;&ZeroWidthSpace;&zwnj;&pcy;&ZeroWidthSpace;&zwnj;&rcy;&ZeroWidthSpace;&zwnj;&scy;&ZeroWidthSpace;&zwnj;&tcy;&ZeroWidthSpace;&zwnj;&tshcy;&ZeroWidthSpace;&zwnj;&ucy;&ZeroWidthSpace;&zwnj;&ubrcy;&ZeroWidthSpace;&zwnj;&fcy;&ZeroWidthSpace;&zwnj;&khcy;&ZeroWidthSpace;&zwnj;&tscy;&ZeroWidthSpace;&zwnj;&chcy;&ZeroWidthSpace;&zwnj;&dzcy;&ZeroWidthSpace;&zwnj;&shcy;&ZeroWidthSpace;&zwnj;&shchcy;&ZeroWidthSpace;&zwnj;&hardcy;&ZeroWidthSpace;&zwnj;&ycy;&ZeroWidthSpace;&zwnj;&softcy;&ZeroWidthSpace;&zwnj;&ecy;&ZeroWidthSpace;&zwnj;&yucy;&ZeroWidthSpace;&zwnj;&yacy;&ZeroWidthSpace;&zwnj;&Alpha;&ZeroWidthSpace;&zwnj;&Beta;&ZeroWidthSpace;&zwnj;&Gamma;&ZeroWidthSpace;&zwnj;&Delta;&ZeroWidthSpace;&zwnj;&Epsilon;&ZeroWidthSpace;&zwnj;&Zeta;&ZeroWidthSpace;&zwnj;&Eta;&ZeroWidthSpace;&zwnj;&Theta;&ZeroWidthSpace;&zwnj;&Iota;&ZeroWidthSpace;&zwnj;&Kappa;&ZeroWidthSpace;&zwnj;&Lambda;&ZeroWidthSpace;&zwnj;&Mu;&ZeroWidthSpace;&zwnj;&Nu;&ZeroWidthSpace;&zwnj;&Xi;&ZeroWidthSpace;&zwnj;&Omicron;&ZeroWidthSpace;&zwnj;&Pi;&ZeroWidthSpace;&zwnj;&Rho;&ZeroWidthSpace;&zwnj;&Sigma;&ZeroWidthSpace;&zwnj;&Tau;&ZeroWidthSpace;&zwnj;&Upsilon;&ZeroWidthSpace;&zwnj;&Phi;&ZeroWidthSpace;&zwnj;&Chi;&ZeroWidthSpace;&zwnj;&Psi;&ZeroWidthSpace;&zwnj;&ohm;&ZeroWidthSpace;&zwnj;&alpha;&ZeroWidthSpace;&zwnj;&beta;&ZeroWidthSpace;&zwnj;&gamma;&ZeroWidthSpace;&zwnj;&delta;&ZeroWidthSpace;&zwnj;&epsi;&ZeroWidthSpace;&zwnj;&zeta;&ZeroWidthSpace;&zwnj;&eta;&ZeroWidthSpace;&zwnj;&theta;&ZeroWidthSpace;&zwnj;&iota;&ZeroWidthSpace;&zwnj;&kappa;&ZeroWidthSpace;&zwnj;&lambda;&ZeroWidthSpace;&zwnj;&mu;&ZeroWidthSpace;&zwnj;&nu;&ZeroWidthSpace;&zwnj;&xi;&ZeroWidthSpace;&zwnj;&omicron;&ZeroWidthSpace;&zwnj;&pi;&ZeroWidthSpace;&zwnj;&rho;&ZeroWidthSpace;&zwnj;&sigma;&ZeroWidthSpace;&zwnj;&tau;&ZeroWidthSpace;&zwnj;&upsi;&ZeroWidthSpace;&zwnj;&phi;&ZeroWidthSpace;&zwnj;&chi;&ZeroWidthSpace;&zwnj;&psi;&ZeroWidthSpace;&zwnj;&omega;&ZeroWidthSpace;&zwnj;&#x3AC;&ZeroWidthSpace;&zwnj;&#x386;&ZeroWidthSpace;&zwnj;&#x3AD;&ZeroWidthSpace;&zwnj;&#x388;&ZeroWidthSpace;&zwnj;&#x3AD;&ZeroWidthSpace;&zwnj;&#x389;&ZeroWidthSpace;&zwnj;&#x3AF;&ZeroWidthSpace;&zwnj;&#x3CA;&ZeroWidthSpace;&zwnj;&#x390;&ZeroWidthSpace;&zwnj;&#x38A;&ZeroWidthSpace;&zwnj;&#x3CC;&ZeroWidthSpace;&zwnj;&#x38C;&ZeroWidthSpace;&zwnj;&#x3CD;&ZeroWidthSpace;&zwnj;&#x3B0;&ZeroWidthSpace;&zwnj;&#x3CB;&ZeroWidthSpace;&zwnj;&#x38E;&ZeroWidthSpace;&zwnj;&#x3AB;&ZeroWidthSpace;&zwnj;&#x38F;&ZeroWidthSpace;&zwnj;&Abreve;&ZeroWidthSpace;&zwnj;&Acirc;&ZeroWidthSpace;&zwnj;&Ecirc;&ZeroWidthSpace;&zwnj;&Ocirc;&ZeroWidthSpace;&zwnj;&#x1A0;&ZeroWidthSpace;&zwnj;&#x1AF;&ZeroWidthSpace;&zwnj;&abreve;&ZeroWidthSpace;&zwnj;&acirc;&ZeroWidthSpace;&zwnj;&ecirc;&ZeroWidthSpace;&zwnj;&ocirc;&ZeroWidthSpace;&zwnj;&#x1A1;&ZeroWidthSpace;&zwnj;&#x1B0;&ZeroWidthSpace;&zwnj;1&ZeroWidthSpace;&zwnj;2&ZeroWidthSpace;&zwnj;3&ZeroWidthSpace;&zwnj;4&ZeroWidthSpace;&zwnj;5&ZeroWidthSpace;&zwnj;6&ZeroWidthSpace;&zwnj;7&ZeroWidthSpace;&zwnj;8&ZeroWidthSpace;&zwnj;9&ZeroWidthSpace;&zwnj;0&ZeroWidthSpace;&zwnj;&lsquo;&ZeroWidthSpace;&zwnj;?&ZeroWidthSpace;&zwnj;&rsquo;&ZeroWidthSpace;&zwnj;&ldquo;&ZeroWidthSpace;&zwnj;!&ZeroWidthSpace;&zwnj;&rdquo;&ZeroWidthSpace;&zwnj;(&ZeroWidthSpace;&zwnj;%&ZeroWidthSpace;&zwnj;)&ZeroWidthSpace;&zwnj;[&ZeroWidthSpace;&zwnj;#&ZeroWidthSpace;&zwnj;]&ZeroWidthSpace;&zwnj;{&ZeroWidthSpace;&zwnj;@&ZeroWidthSpace;&zwnj;}&ZeroWidthSpace;&zwnj;/&ZeroWidthSpace;&zwnj;&amp;\&ZeroWidthSpace;&zwnj;
+          | &lt;-&ZeroWidthSpace;&zwnj;+&ZeroWidthSpace;&zwnj;&div;&ZeroWidthSpace;&zwnj;&times;&ZeroWidthSpace;&zwnj;=&ZeroWidthSpace;&zwnj;&gt;&ZeroWidthSpace;&zwnj;&reg;&ZeroWidthSpace;&zwnj;&copy;&ZeroWidthSpace;&zwnj;$&ZeroWidthSpace;&zwnj;&euro;&ZeroWidthSpace;&zwnj;&pound;&ZeroWidthSpace;&zwnj;&yen;&ZeroWidthSpace;&zwnj;&cent;&ZeroWidthSpace;&zwnj;:&ZeroWidthSpace;&zwnj;;&ZeroWidthSpace;&zwnj;,&ZeroWidthSpace;&zwnj;.&ZeroWidthSpace;&zwnj;*
+      |           
+      div
+        hr
+        |             
+        h3.ui-font-primary
+          strong Styles
+        |             
+        h3.typography-styles.ui-font-primary.ui-font-light Light
+        |             
+        h3.typography-styles.ui-font-primary.ui-font-regular Regular
+        |             
+        h3.typography-styles.ui-font-primary.ui-font-bold Bold
+  // Secondary Font
+  section.mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      hr
+      |           
+      h3.ui-font-primary
+        strong Fonts
+      |           
+      p.ui-margin-none Libre Baskerville
+      |           
+      a(href='https://fonts.google.com/specimen/Libre+Baskerville', traget='_blank') https://fonts.google.com/specimen/Open+Sans
+  |       
+  section.mdl-grid
+    .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--3-col-desktop
+      hr
+      |           
+      h3.ui-font-primary
+        strong Glyph
+      |           
+      span.typography-glyph.ui-font-secondary L1
+    |         
+    .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--9-col-desktop
+      div
+        hr
+        |             
+        h3.ui-font-primary
+          strong Characters
+        |             
+        p.typography-characters.ui-font-light.ui-font-secondary
+          | &ZeroWidthSpace;&zwnj;
+          | A&ZeroWidthSpace;&zwnj;B&ZeroWidthSpace;&zwnj;C&ZeroWidthSpace;&zwnj;&Ccaron;&ZeroWidthSpace;&zwnj;&Cacute;&ZeroWidthSpace;&zwnj;D&ZeroWidthSpace;&zwnj;&Dstrok;&ZeroWidthSpace;&zwnj;E&ZeroWidthSpace;&zwnj;F&ZeroWidthSpace;&zwnj;G&ZeroWidthSpace;&zwnj;H&ZeroWidthSpace;&zwnj;I&ZeroWidthSpace;&zwnj;J&ZeroWidthSpace;&zwnj;K&ZeroWidthSpace;&zwnj;L&ZeroWidthSpace;&zwnj;M&ZeroWidthSpace;&zwnj;N&ZeroWidthSpace;&zwnj;O&ZeroWidthSpace;&zwnj;P&ZeroWidthSpace;&zwnj;Q&ZeroWidthSpace;&zwnj;R&ZeroWidthSpace;&zwnj;S&ZeroWidthSpace;&zwnj;&Scaron;&ZeroWidthSpace;&zwnj;T&ZeroWidthSpace;&zwnj;U&ZeroWidthSpace;&zwnj;V&ZeroWidthSpace;&zwnj;W&ZeroWidthSpace;&zwnj;X&ZeroWidthSpace;&zwnj;Y&ZeroWidthSpace;&zwnj;Z&ZeroWidthSpace;&zwnj;&Zcaron;&ZeroWidthSpace;&zwnj;a&ZeroWidthSpace;&zwnj;b&ZeroWidthSpace;&zwnj;c&ZeroWidthSpace;&zwnj;&ccaron;&ZeroWidthSpace;&zwnj;&cacute;&ZeroWidthSpace;&zwnj;d&ZeroWidthSpace;&zwnj;&dstrok;&ZeroWidthSpace;&zwnj;e&ZeroWidthSpace;&zwnj;f&ZeroWidthSpace;&zwnj;g&ZeroWidthSpace;&zwnj;h&ZeroWidthSpace;&zwnj;i&ZeroWidthSpace;&zwnj;j&ZeroWidthSpace;&zwnj;k&ZeroWidthSpace;&zwnj;l&ZeroWidthSpace;&zwnj;m&ZeroWidthSpace;&zwnj;n&ZeroWidthSpace;&zwnj;o&ZeroWidthSpace;&zwnj;p&ZeroWidthSpace;&zwnj;q&ZeroWidthSpace;&zwnj;r&ZeroWidthSpace;&zwnj;s&ZeroWidthSpace;&zwnj;&scaron;&ZeroWidthSpace;&zwnj;t&ZeroWidthSpace;&zwnj;u&ZeroWidthSpace;&zwnj;v&ZeroWidthSpace;&zwnj;w&ZeroWidthSpace;&zwnj;x&ZeroWidthSpace;&zwnj;y&ZeroWidthSpace;&zwnj;z&ZeroWidthSpace;&zwnj;&zcaron;&ZeroWidthSpace;&zwnj;&Acy;&ZeroWidthSpace;&zwnj;&Bcy;&ZeroWidthSpace;&zwnj;&Vcy;&ZeroWidthSpace;&zwnj;&Gcy;&ZeroWidthSpace;&zwnj;&#x490;&ZeroWidthSpace;&zwnj;&Dcy;&ZeroWidthSpace;&zwnj;&DJcy;&ZeroWidthSpace;&zwnj;&IEcy;&ZeroWidthSpace;&zwnj;&IOcy;&ZeroWidthSpace;&zwnj;&Jukcy;&ZeroWidthSpace;&zwnj;&ZHcy;&ZeroWidthSpace;&zwnj;&Zcy;&ZeroWidthSpace;&zwnj;&DScy;&ZeroWidthSpace;&zwnj;&Icy;&ZeroWidthSpace;&zwnj;&Iukcy;&ZeroWidthSpace;&zwnj;&YIcy;&ZeroWidthSpace;&zwnj;&Jcy;&ZeroWidthSpace;&zwnj;&Jsercy;&ZeroWidthSpace;&zwnj;&Kcy;&ZeroWidthSpace;&zwnj;&Lcy;&ZeroWidthSpace;&zwnj;&LJcy;&ZeroWidthSpace;&zwnj;&Mcy;&ZeroWidthSpace;&zwnj;&Ncy;&ZeroWidthSpace;&zwnj;&NJcy;&ZeroWidthSpace;&zwnj;&Ocy;&ZeroWidthSpace;&zwnj;&Pcy;&ZeroWidthSpace;&zwnj;&Rcy;&ZeroWidthSpace;&zwnj;&Scy;&ZeroWidthSpace;&zwnj;&Tcy;&ZeroWidthSpace;&zwnj;&TSHcy;&ZeroWidthSpace;&zwnj;&Ucy;&ZeroWidthSpace;&zwnj;&Ubrcy;&ZeroWidthSpace;&zwnj;&Fcy;&ZeroWidthSpace;&zwnj;&KHcy;&ZeroWidthSpace;&zwnj;&TScy;&ZeroWidthSpace;&zwnj;&CHcy;&ZeroWidthSpace;&zwnj;&DZcy;&ZeroWidthSpace;&zwnj;&SHcy;&ZeroWidthSpace;&zwnj;&SHCHcy;&ZeroWidthSpace;&zwnj;&HARDcy;&ZeroWidthSpace;&zwnj;&Ycy;&ZeroWidthSpace;&zwnj;&SOFTcy;&ZeroWidthSpace;&zwnj;&Ecy;&ZeroWidthSpace;&zwnj;&YUcy;&ZeroWidthSpace;&zwnj;&YAcy;&ZeroWidthSpace;&zwnj;&acy;&ZeroWidthSpace;&zwnj;&bcy;&ZeroWidthSpace;&zwnj;&vcy;&ZeroWidthSpace;&zwnj;&gcy;&ZeroWidthSpace;&zwnj;&#x491;&ZeroWidthSpace;&zwnj;&dcy;&ZeroWidthSpace;&zwnj;&djcy;&ZeroWidthSpace;&zwnj;&iecy;&ZeroWidthSpace;&zwnj;&iocy;&ZeroWidthSpace;&zwnj;&jukcy;&ZeroWidthSpace;&zwnj;&zhcy;&ZeroWidthSpace;&zwnj;&zcy;&ZeroWidthSpace;&zwnj;&dscy;&ZeroWidthSpace;&zwnj;&icy;&ZeroWidthSpace;&zwnj;&iukcy;&ZeroWidthSpace;&zwnj;&yicy;&ZeroWidthSpace;&zwnj;&jcy;&ZeroWidthSpace;&zwnj;&jsercy;&ZeroWidthSpace;&zwnj;&kcy;&ZeroWidthSpace;&zwnj;&lcy;&ZeroWidthSpace;&zwnj;&ljcy;&ZeroWidthSpace;&zwnj;&mcy;&ZeroWidthSpace;&zwnj;&ncy;&ZeroWidthSpace;&zwnj;&njcy;&ZeroWidthSpace;&zwnj;&ocy;&ZeroWidthSpace;&zwnj;&pcy;&ZeroWidthSpace;&zwnj;&rcy;&ZeroWidthSpace;&zwnj;&scy;&ZeroWidthSpace;&zwnj;&tcy;&ZeroWidthSpace;&zwnj;&tshcy;&ZeroWidthSpace;&zwnj;&ucy;&ZeroWidthSpace;&zwnj;&ubrcy;&ZeroWidthSpace;&zwnj;&fcy;&ZeroWidthSpace;&zwnj;&khcy;&ZeroWidthSpace;&zwnj;&tscy;&ZeroWidthSpace;&zwnj;&chcy;&ZeroWidthSpace;&zwnj;&dzcy;&ZeroWidthSpace;&zwnj;&shcy;&ZeroWidthSpace;&zwnj;&shchcy;&ZeroWidthSpace;&zwnj;&hardcy;&ZeroWidthSpace;&zwnj;&ycy;&ZeroWidthSpace;&zwnj;&softcy;&ZeroWidthSpace;&zwnj;&ecy;&ZeroWidthSpace;&zwnj;&yucy;&ZeroWidthSpace;&zwnj;&yacy;&ZeroWidthSpace;&zwnj;&Alpha;&ZeroWidthSpace;&zwnj;&Beta;&ZeroWidthSpace;&zwnj;&Gamma;&ZeroWidthSpace;&zwnj;&Delta;&ZeroWidthSpace;&zwnj;&Epsilon;&ZeroWidthSpace;&zwnj;&Zeta;&ZeroWidthSpace;&zwnj;&Eta;&ZeroWidthSpace;&zwnj;&Theta;&ZeroWidthSpace;&zwnj;&Iota;&ZeroWidthSpace;&zwnj;&Kappa;&ZeroWidthSpace;&zwnj;&Lambda;&ZeroWidthSpace;&zwnj;&Mu;&ZeroWidthSpace;&zwnj;&Nu;&ZeroWidthSpace;&zwnj;&Xi;&ZeroWidthSpace;&zwnj;&Omicron;&ZeroWidthSpace;&zwnj;&Pi;&ZeroWidthSpace;&zwnj;&Rho;&ZeroWidthSpace;&zwnj;&Sigma;&ZeroWidthSpace;&zwnj;&Tau;&ZeroWidthSpace;&zwnj;&Upsilon;&ZeroWidthSpace;&zwnj;&Phi;&ZeroWidthSpace;&zwnj;&Chi;&ZeroWidthSpace;&zwnj;&Psi;&ZeroWidthSpace;&zwnj;&ohm;&ZeroWidthSpace;&zwnj;&alpha;&ZeroWidthSpace;&zwnj;&beta;&ZeroWidthSpace;&zwnj;&gamma;&ZeroWidthSpace;&zwnj;&delta;&ZeroWidthSpace;&zwnj;&epsi;&ZeroWidthSpace;&zwnj;&zeta;&ZeroWidthSpace;&zwnj;&eta;&ZeroWidthSpace;&zwnj;&theta;&ZeroWidthSpace;&zwnj;&iota;&ZeroWidthSpace;&zwnj;&kappa;&ZeroWidthSpace;&zwnj;&lambda;&ZeroWidthSpace;&zwnj;&mu;&ZeroWidthSpace;&zwnj;&nu;&ZeroWidthSpace;&zwnj;&xi;&ZeroWidthSpace;&zwnj;&omicron;&ZeroWidthSpace;&zwnj;&pi;&ZeroWidthSpace;&zwnj;&rho;&ZeroWidthSpace;&zwnj;&sigma;&ZeroWidthSpace;&zwnj;&tau;&ZeroWidthSpace;&zwnj;&upsi;&ZeroWidthSpace;&zwnj;&phi;&ZeroWidthSpace;&zwnj;&chi;&ZeroWidthSpace;&zwnj;&psi;&ZeroWidthSpace;&zwnj;&omega;&ZeroWidthSpace;&zwnj;&#x3AC;&ZeroWidthSpace;&zwnj;&#x386;&ZeroWidthSpace;&zwnj;&#x3AD;&ZeroWidthSpace;&zwnj;&#x388;&ZeroWidthSpace;&zwnj;&#x3AD;&ZeroWidthSpace;&zwnj;&#x389;&ZeroWidthSpace;&zwnj;&#x3AF;&ZeroWidthSpace;&zwnj;&#x3CA;&ZeroWidthSpace;&zwnj;&#x390;&ZeroWidthSpace;&zwnj;&#x38A;&ZeroWidthSpace;&zwnj;&#x3CC;&ZeroWidthSpace;&zwnj;&#x38C;&ZeroWidthSpace;&zwnj;&#x3CD;&ZeroWidthSpace;&zwnj;&#x3B0;&ZeroWidthSpace;&zwnj;&#x3CB;&ZeroWidthSpace;&zwnj;&#x38E;&ZeroWidthSpace;&zwnj;&#x3AB;&ZeroWidthSpace;&zwnj;&#x38F;&ZeroWidthSpace;&zwnj;&Abreve;&ZeroWidthSpace;&zwnj;&Acirc;&ZeroWidthSpace;&zwnj;&Ecirc;&ZeroWidthSpace;&zwnj;&Ocirc;&ZeroWidthSpace;&zwnj;&#x1A0;&ZeroWidthSpace;&zwnj;&#x1AF;&ZeroWidthSpace;&zwnj;&abreve;&ZeroWidthSpace;&zwnj;&acirc;&ZeroWidthSpace;&zwnj;&ecirc;&ZeroWidthSpace;&zwnj;&ocirc;&ZeroWidthSpace;&zwnj;&#x1A1;&ZeroWidthSpace;&zwnj;&#x1B0;&ZeroWidthSpace;&zwnj;1&ZeroWidthSpace;&zwnj;2&ZeroWidthSpace;&zwnj;3&ZeroWidthSpace;&zwnj;4&ZeroWidthSpace;&zwnj;5&ZeroWidthSpace;&zwnj;6&ZeroWidthSpace;&zwnj;7&ZeroWidthSpace;&zwnj;8&ZeroWidthSpace;&zwnj;9&ZeroWidthSpace;&zwnj;0&ZeroWidthSpace;&zwnj;&lsquo;&ZeroWidthSpace;&zwnj;?&ZeroWidthSpace;&zwnj;&rsquo;&ZeroWidthSpace;&zwnj;&ldquo;&ZeroWidthSpace;&zwnj;!&ZeroWidthSpace;&zwnj;&rdquo;&ZeroWidthSpace;&zwnj;(&ZeroWidthSpace;&zwnj;%&ZeroWidthSpace;&zwnj;)&ZeroWidthSpace;&zwnj;[&ZeroWidthSpace;&zwnj;#&ZeroWidthSpace;&zwnj;]&ZeroWidthSpace;&zwnj;{&ZeroWidthSpace;&zwnj;@&ZeroWidthSpace;&zwnj;}&ZeroWidthSpace;&zwnj;/&ZeroWidthSpace;&zwnj;&amp;\&ZeroWidthSpace;&zwnj;
+          | &lt;-&ZeroWidthSpace;&zwnj;+&ZeroWidthSpace;&zwnj;&div;&ZeroWidthSpace;&zwnj;&times;&ZeroWidthSpace;&zwnj;=&ZeroWidthSpace;&zwnj;&gt;&ZeroWidthSpace;&zwnj;&reg;&ZeroWidthSpace;&zwnj;&copy;&ZeroWidthSpace;&zwnj;$&ZeroWidthSpace;&zwnj;&euro;&ZeroWidthSpace;&zwnj;&pound;&ZeroWidthSpace;&zwnj;&yen;&ZeroWidthSpace;&zwnj;&cent;&ZeroWidthSpace;&zwnj;:&ZeroWidthSpace;&zwnj;;&ZeroWidthSpace;&zwnj;,&ZeroWidthSpace;&zwnj;.&ZeroWidthSpace;&zwnj;*
+      |           
+      div
+        hr
+        |             
+        h3.ui-font-primary
+          strong Styles
+        |             
+        h3.typography-styles.ui-font-secondary Regular
+        |             
+        h3.typography-styles.ui-font-secondary
+          i Regular Italic
+        |             
+        h3.typography-styles.ui-font-bold.ui-font-secondary Bold
+  |       
+  section.mdl-grid
+    .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--3-col-desktop
+      hr
+      |           
+      h3.ui-font-primary
+        strong Font pairing
+    |         
+    .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--9-col-desktop
+      div
+        hr
+        |             
+        h4.mdl-typography--display-1 The spectacle before us was indeed sublime.
+        |             
+        p
+          | &ZeroWidthSpace;&zwnj;Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+          | By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath
+          | was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
+          | Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+  // Components
+  section.mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      hr
+      |           
+      h3.ui-font-primary
+        strong Components
+      |           
+      h1.ui-font-primary Buttons
+      |           
+      .mdl-grid.mdl-grid--no-spacing
+        .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--3-col-desktop.ui-padding-bottom-sm
+          button.mdl-button.mdl-js-button.mdl-button--raised
+            | btn default
+        |             
+        .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--3-col-desktop.ui-padding-bottom-sm
+          button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored
+            | btn primary
+        |             
+        .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--3-col-desktop.ui-padding-bottom-sm
+          button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent
+            | btn accent
+        |             
+        .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--3-col-desktop.ui-padding-bottom-sm
+          button.mdl-button.mdl-js-button.mdl-button--raised(disabled='')
+            | btn disable
+  |       
+  section.mdl-grid
+    .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--3-col-desktop
+      hr
+      |           
+      h3.ui-font-primary
+        strong Tags
+    |         
+    .mdl-cell.mdl-cell--6-col-tablet.mdl-cell--9-col-desktop
+      hr
+      |             
+      h3.ui-font-primary
+        strong Headings
+      |             
+      .mdl-grid.mdl-grid--no-spacing
+        .mdl-cell--4-col.mdl-cell--4-col-tablet
+          h1.heading Heading 1
+          |                   
+          p Libre Baskerville 24px
+        |                 
+        .mdl-cell--4-col.mdl-cell--4-col-tablet
+          h2.heading Heading 2
+          |                   
+          p Libre Baskerville 20px
+        |                 
+        .mdl-cell--4-col.mdl-cell--4-col-tablet
+          h3.heading Heading 3
+          |                   
+          p Libre Baskerville 16px
+        |                 
+        .mdl-cell--4-col.mdl-cell--4-col-tablet
+          h4.heading Heading 4
+          |                   
+          p Libre Baskerville 15px
+        |                 
+        .mdl-cell--4-col.mdl-cell--4-col-tablet
+          h5.heading Heading 5
+          |                   
+          p Libre Baskerville 13px
+        |                 
+        .mdl-cell--4-col.mdl-cell--4-col-tablet
+          h6.heading Heading 6
+          |                   
+          p Libre Baskerville 12px
+      |           
+      |             
+      hr
+      |             
+      h3.ui-font-primary
+        strong Body Text
+      |             
+      .mdl-grid.mdl-grid--no-spacing
+        .mdl-cell--4-col.mdl-cell--4-col-tablet
+          | Body text
+          p Open Sans 14px
+        |               
+        .mdl-cell--4-col.mdl-cell--4-col-tablet
+          strong Body text bold
+          |                 
+          p Open Sans Bold 14px
+      |             
+      hr
+      |             
+      h3.ui-font-primary
+        strong Display
+      |             
+      .mdl-grid.mdl-grid--no-spacing
+        .mdl-cell.mdl-cell--12-col
+          .mdl-typography--display-4
+            | Display 4
+          |                 
+          p
+            | Open Sans Light 112px 
+            br
+            |                   Line height: 120px
+        |               
+        .mdl-cell.mdl-cell--12-col
+          .mdl-typography--display-3
+            | Display 3
+          |                 
+          p.ui-padding-top-xs
+            | Open Sans Light 56px 
+            br
+            |                   Line height: 62px
+        |               
+        .mdl-cell.mdl-cell--12-col
+          .mdl-typography--display-2
+            | Display 2
+          |                 
+          p.ui-padding-top-xs
+            | Open Sans Light 46px
+            br
+            |  Line height: 50px
+        |               
+        .mdl-cell.mdl-cell--12-col
+          .mdl-typography--display-1
+            | Display 1
+          |                 
+          p.ui-padding-top-xs
+            | Open Sans Light 34px
+            br
+            |  Line height: 40px
+  // Color palette
+  section.mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      hr
+      |           
+      h3.ui-font-primary
+        strong Color palette
+      |           
+      .mdl-grid.mdl-grid--no-spacing
+        .mdl-cell.mdl-cell--4-col.mdl-cell--6-col-tablet.ui-padding-bottom-md
+          .demo-palette-heading.mdl-color--fune-primary-500
+            .demo-palette-name Fune primary
+            |                 500
+          |               
+          .demo-palette-color.mdl-color--fune-primary-50.mdl-color-text--black.mdl-color-text--black 50
+          |               
+          .demo-palette-color.mdl-color--fune-primary-100.mdl-color-text--black.mdl-color-text--black 100
+          |               
+          .demo-palette-color.mdl-color--fune-primary-200.mdl-color-text--black.mdl-color-text--black 200
+          |               
+          .demo-palette-color.mdl-color--fune-primary-300.mdl-color-text--black.mdl-color-text--black 300
+          |               
+          .demo-palette-color.mdl-color--fune-primary-400.mdl-color-text--black.mdl-color-text--black 400
+          |               
+          .demo-palette-color.mdl-color--fune-primary-500.mdl-color-text--black 500
+          |               
+          .demo-palette-color.mdl-color--fune-primary-600.mdl-color-text--black 600
+          |               
+          .demo-palette-color.mdl-color--fune-primary-700.mdl-color-text--black 700
+          |               
+          .demo-palette-color.mdl-color--fune-primary-800.mdl-color-text--black 800
+          |               
+          .demo-palette-color.mdl-color--fune-primary-900 900
+          |               
+          .demo-palette-color.mdl-color--fune-primary-A100.mdl-color-text--black A100
+          |               
+          .demo-palette-color.mdl-color--fune-primary-A200.mdl-color-text--black A200
+          |               
+          .demo-palette-color.mdl-color--fune-primary-A400.mdl-color-text--black A400
+          |               
+          .demo-palette-color.mdl-color--fune-primary-A700.mdl-color-text--black A700
+        |       
+        |             
+        .mdl-cell.mdl-cell--4-col.mdl-cell--6-col-tablet.ui-padding-bottom-md
+          .demo-palette-heading.mdl-color--fune-accent-500
+            .demo-palette-name Fune accent
+            |                 500
+          |               
+          .demo-palette-color.mdl-color--fune-accent-50.mdl-color-text--black 50
+          |               
+          .demo-palette-color.mdl-color--fune-accent-100.mdl-color-text--black 100
+          |               
+          .demo-palette-color.mdl-color--fune-accent-200.mdl-color-text--black 200
+          |               
+          .demo-palette-color.mdl-color--fune-accent-300.mdl-color-text--black 300
+          |               
+          .demo-palette-color.mdl-color--fune-accent-400.mdl-color-text--black 400
+          |               
+          .demo-palette-color.mdl-color--fune-accent-500 500
+          |               
+          .demo-palette-color.mdl-color--fune-accent-600 600
+          |               
+          .demo-palette-color.mdl-color--fune-accent-700 700
+          |               
+          .demo-palette-color.mdl-color--fune-accent-800 800
+          |               
+          .demo-palette-color.mdl-color--fune-accent-900 900
+          |               
+          .demo-palette-color.mdl-color--fune-accent-A100.mdl-color-text--black A100
+          |               
+          .demo-palette-color.mdl-color--fune-accent-A200.mdl-color-text--black A200
+          |               
+          .demo-palette-color.mdl-color--fune-accent-A400.mdl-color-text--black A400
+          |               
+          .demo-palette-color.mdl-color--fune-accent-A700.mdl-color-text--black A700
+        |       
+        |             
+        .mdl-cell.mdl-cell--4-col.mdl-cell--6-col-tablet
+          .demo-palette-heading.mdl-color--fune-dark-500
+            .demo-palette-name Fune dark
+            |                 500
+          |               
+          .demo-palette-color.mdl-color--fune-dark-50.mdl-color-text--black 50
+          |               
+          .demo-palette-color.mdl-color--fune-dark-100.mdl-color-text--black 100
+          |               
+          .demo-palette-color.mdl-color--fune-dark-200.mdl-color-text--black 200
+          |               
+          .demo-palette-color.mdl-color--fune-dark-300 300
+          |               
+          .demo-palette-color.mdl-color--fune-dark-400 400
+          |               
+          .demo-palette-color.mdl-color--fune-dark-500 500
+          |               
+          .demo-palette-color.mdl-color--fune-dark-600 600
+          |               
+          .demo-palette-color.mdl-color--fune-dark-700 700
+          |               
+          .demo-palette-color.mdl-color--fune-dark-800 800
+          |               
+          .demo-palette-color.mdl-color--fune-dark-900 900
+          |               
+          .demo-palette-color.mdl-color--fune-dark-A100.mdl-color-text--black A100
+          |               
+          .demo-palette-color.mdl-color--fune-dark-A200 A200
+          |               
+          .demo-palette-color.mdl-color--fune-dark-A400 A400
+          |               
+          .demo-palette-color.mdl-color--fune-dark-A700 A700

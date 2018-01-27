@@ -21,7 +21,7 @@ html.no-js(lang=`${language}`)
     |
     // build:css styles/vendor.min.css
     // bower:css
-    link(rel='stylesheet', href='/bower_components/material-design-lite/material.min.css')
+    //- link(rel='stylesheet', href='/bower_components/material-design-lite/material.min.css')
     // endbower
     // endbuild
     |
@@ -41,17 +41,21 @@ html.no-js(lang=`${language}`)
 
   body(class=body ? body : 'p-home')
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+    
+      if !styleGuide
+        include header.pug
 
-      include header.pug
-      
-      block content
-      
-      include footer.pug
+      main.mdl-layout__content
+
+        block content
+        
+        if !styleGuide  
+          include footer.pug
 
     // build:js scripts/vendor.js
     // bower:js
-    script(src='/bower_components/material-design-lite/material.min.js')
     script(src='/bower_components/modernizr/modernizr.js')
+    script(src='/bower_components/material-design-lite/material.min.js')
     // endbower
     // endbuild
     // build:js scripts/main.js

@@ -5,5 +5,141 @@ block vars
   -var description = 'Funerama home page'
   
 block content
-  .hero-unit
-    h1 #{title}
+  section.section-1.mdl-color-text--white
+    .p-home-photo
+      // background image
+      .p-home-photo-content
+        .mdl-grid.mdl-typography--text-center(data-layout='size-lg')
+          .mdl-cell.mdl-cell--12-col.mdl-cell--middle
+            h2.section-1-h2(data-label='center accent sm')
+              | De voordelen van Funerama                
+            h1.section-1-h1.mdl-typography--display-2 Ontdek het gemak van Funerama          
+            .mdl-grid
+              .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-tablet
+                img(src='images/logo/isotipo-white.svg', alt='Funerama iso')
+                |                     
+                p Reserveer eenvoudig vanuit uw persoonlijke dashboard.
+              |                   
+              .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-tablet
+                img(src='images/logo/isotipo-white.svg', alt='Funerama iso')
+                |                     
+                p Bestel direct bij uw leveranciers.
+              |                   
+              .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-tablet
+                img(src='images/logo/isotipo-white.svg', alt='Funerama iso')
+                |                     
+                p Al uw diensten, producten en aanvullende reserveringen in &eacute;&eacute;n agenda.
+  |       
+  section.section-2.mdl-color-text--white.mdl-color--fune-accent
+    .mdl-grid(data-layout='size-sm')
+      .mdl-cell.mdl-cell--12-col.mdl-cell--middle
+        h5.section-2-detail.ui-font-primary.ui-margin-none
+          | A marketplace dedicated to funeral planning 
+          br
+          |                Pay per Performance - only pay when a new prospect is delivered to you 
+          br
+          |                Simple &amp; Inexpensive 
+          br
+          |                Direct Access to High Quality Users and Leads 
+          br
+          |                Receive new prospects to your inbox or phone
+  |       
+  section.section-3.ui-padding-bottom-md.mdl-typography--text-center
+    .section-3-1.mdl-color--white
+      span.p-home-bullet.mdl-color--accent.ic-arrow-drop-down-white-24px
+    |         
+    h2.mdl-typography--display-1.ui-margin-vertical-xs
+      | 3 easy steps
+    |         
+    .mdl-grid(data-layout='size-sm')
+      .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-tablet
+        span.p-home-bullet.heading-2.mdl-color--accent.ui-font-secondary.mdl-color-text--white 1
+        |               
+        p Contact Funerama
+      |             
+      .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-tablet
+        span.p-home-bullet.heading-2.mdl-color--accent.ui-font-secondary.mdl-color-text--white 2
+        |               
+        p Select a category and enter your business information
+      |             
+      .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-tablet
+        span.p-home-bullet.heading-2.mdl-color--accent.ui-font-secondary.mdl-color-text--white 3
+        |               
+        p Confirm and submit
+    |       
+    |         
+    h2.mdl-typography--display-1.ui-margin-vertical-xs
+      | What you get
+    |         
+    .mdl-grid.section-3-2(data-layout='size-md')
+      .mdl-cell.mdl-cell--6-col.mdl-cell--3-col-tablet
+        p
+          strong.mdl-typography--text-uppercase.block PROFILE
+          |               A customizable, SEO focused profile that can be easily managed via your User Dashboard.
+      |           
+      .mdl-cell.mdl-cell--6-col.mdl-cell--3-col-tablet
+        p
+          strong.mdl-typography--text-uppercase.block GET CONTACTED
+          |               Members can contact you directly by phone &amp; email. View their message &amp; contact details.
+    |         
+    .mdl-grid.section-3-2(data-layout='size-md')
+      .mdl-cell.mdl-cell--6-col.mdl-cell--3-col-tablet
+        p
+          strong.mdl-typography--text-uppercase.block CUSTOMIZED WITH PHOTOS &amp; ABOUT US
+          |                Upload a Cover Photo &amp; supporting photos. Tell your story with a custom &quot;About Us&quot;.
+      |           
+      .mdl-cell.mdl-cell--6-col.mdl-cell--3-col-tablet
+        p
+          strong.mdl-typography--text-uppercase.block REVIEWS
+          |                Receive Reviews on your business. Monitor them and respond via your Dashboard.
+  |       
+  section.section-4.mdl-color--fune-primary-200.ui-padding-top-lg.ui-padding-bottom-md
+    br
+    |         
+    h2.mdl-typography--display-1.mdl-typography--text-center.ui-margin-bottom-none Our categories
+    |         
+    .mdl-grid(data-layout='size-lg')
+      .mdl-cell.mdl-cell--3-col-desktop
+        ul.ui-reset-ul
+          li Cremation Jewelry
+          |                 
+          li Headstones and Monuments
+          |                 
+          li Home Funeral Guide &amp; Educator
+          |                 
+          li Eye Donation Organization
+      |             
+      .mdl-cell.mdl-cell--3-col-desktop
+        ul.ui-reset-ul
+          li Funeral Home
+          |                 
+          li Officiant
+          |                 
+          li Death Doula
+          |                 
+          li Estate Services
+      |             
+      .mdl-cell.mdl-cell--3-col-desktop
+        ul.ui-reset-ul
+          li Florist
+          |                 
+          li Caskets and Urns
+          |                 
+          li Body Donation Organization
+      |             
+      .mdl-cell.mdl-cell--3-col-desktop
+        ul.ui-reset-ul
+          li Cemetery
+          |                 
+          li Funeral Consumers Alliance
+          |                 
+          li Organ and Tissue Donation
+  |       
+  section.mdl-layout.ui-padding-bottom-md
+    .mdl-grid.mdl-typography--text-center(data-layout='size-lg')
+      .mdl-cell.mdl-cell--12-col
+        h2 Benieuwd naar de voordelen voor uw onderneming?
+        |             
+        button.ui-padding-horizontal-xl.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent
+          | Contact Us
+
