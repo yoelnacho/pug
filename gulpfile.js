@@ -11,6 +11,15 @@ const reload = browserSync.reload;
 
 let dev = true;
 
+gulp.task("views", () => {
+  return gulp
+    .src("app/*.pug")
+    .pipe($.plumber())
+    .pipe($.pug({ pretty: true }))
+    .pipe(gulp.dest(".tmp"))
+    .pipe(reload({ stream: true }));
+});
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -53,22 +62,24 @@ gulp.task('lint:test', () => {
     .pipe(gulp.dest('test/spec'));
 });
 
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
-    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
-      processConditionalComments: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    })))
-    .pipe(gulp.dest('dist'));
+gulp.task("html", ["views", "styles", "scripts"], () => {
+  return gulp
+    // .src("app/*.html")
+      .src(["app/*.html", ".tmp/*.html"])
+      .pipe($.useref({ searchPath: [".tmp", "app", "."] }))
+      .pipe($.if(/\.js$/, $.uglify({ compress: { drop_console: true } })))
+      .pipe($.if(/\.css$/, $.cssnano({ safe: true, autoprefixer: false })))
+      .pipe($.if(/\.html$/, $.htmlmin({
+            collapseWhitespace: true,
+            minifyCSS: true,
+            minifyJS: { compress: { drop_console: true } },
+            processConditionalComments: true,
+            removeComments: true,
+            removeEmptyAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true
+          })))
+      .pipe(gulp.dest("dist"));
 });
 
 gulp.task('images', () => {
@@ -86,7 +97,9 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*',
-    '!app/*.html'
+    // '!app/*.html'
+    '!app/*.html',
+    '!app/*.pug'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
@@ -95,29 +108,32 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
-    browserSync.init({
-      notify: false,
-      port: 9000,
-      server: {
-        baseDir: ['.tmp', 'app'],
-        routes: {
-          '/bower_components': 'bower_components'
+  runSequence(
+    ["clean", "wiredep"],
+    ["views", "styles", "scripts", "fonts"],
+    () => {
+      browserSync.init({
+        notify: false,
+        port: 9000,
+        server: {
+          baseDir: [".tmp", "app"],
+          routes: {
+            "/bower_components": "bower_components"
+          }
         }
-      }
-    });
+      });
 
-    gulp.watch([
-      'app/*.html',
-      'app/images/**/*',
-      '.tmp/fonts/**/*'
-    ]).on('change', reload);
+      gulp
+        .watch(["app/*.html", "app/images/**/*", ".tmp/fonts/**/*"])
+        .on("change", reload);
 
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/fonts/**/*', ['fonts']);
-    gulp.watch('bower.json', ['wiredep', 'fonts']);
-  });
+      gulp.watch("app/**/*.pug", ["views"]);
+      gulp.watch("app/styles/**/*.scss", ["styles"]);
+      gulp.watch("app/scripts/**/*.js", ["scripts"]);
+      gulp.watch("app/fonts/**/*", ["fonts"]);
+      gulp.watch("bower.json", ["wiredep", "fonts"]);
+    }
+  );
 });
 
 gulp.task('serve:dist', ['default'], () => {
@@ -158,11 +174,26 @@ gulp.task('wiredep', () => {
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('app/*.html')
+  // gulp.src('app/*.html')
+  gulp.src('app/layouts/*.pug')
     .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./
+      ignorePath: /^(\.\.\/)*\.\./,
+      fileTypes: {
+         pug: {
+           block: /(([ \t]*)\/\/-?\s*bower:*(\S*))(\n|\r|.)*?(\/\/-?\s*endbower)/gi,
+           detect: {
+             js: /script\(.*src=['"]([^'"]+)/gi,
+             css: /link\(.*href=['"]([^'"]+)/gi
+           },
+           replace: {
+             js: 'script(src=\'{{filePath}}\')',
+             css: 'link(rel=\'stylesheet\', href=\'{{filePath}}\')'
+           }
+         }
+       }
     }))
-    .pipe(gulp.dest('app'));
+    // .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('app/layouts'));
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
@@ -175,3 +206,5 @@ gulp.task('default', () => {
     runSequence(['clean', 'wiredep'], 'build', resolve);
   });
 });
+
+gulp.task('plug');
