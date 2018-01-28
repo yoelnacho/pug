@@ -17,8 +17,7 @@ $ docker run --name funerama-landing -it --rm -v $(pwd):/usr/src/app:rw -p3000:3
 ## Gulp tasks
 `npm run start` : Render a debug version of your project in your browser and start watching over file changes.
 `npm run build` : Build a distribution version of the website in a `dist` folder.
-`gulp versionify` : Update your `package.json` version number.
-`gulp serveDist` : Build a distribution version of the website in a `dist` and render it a browser.
+`gulp serve:dist` : Build a distribution version of the website in a `dist` and render it a browser.
 
 ## Html templates - PUG
 Pug - [Docs](https://pugjs.org/api/getting-started.html)

@@ -207,4 +207,4 @@ gulp.task('default', () => {
   });
 });
 
-gulp.task('plug');
+// gulp.task('plug');
