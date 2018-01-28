@@ -1,5 +1,11 @@
 {
+  "name": "funerama",
+  "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build"
+  },
   "engines": {
     "node": ">=4"
   },
@@ -38,10 +44,7 @@
       "browser": true
     },
     "rules": {
-      "quotes": [
-        2,
-        "single"
-      ]
+      "quotes": [2, "single"]
     }
   }
 }
