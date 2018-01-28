@@ -1,14 +1,49 @@
 extends layouts/default
 
+block vars
+  -var title = 'Funerama - About us'
+  -var description = 'Funerama about us'
+  
 block content
-  .hero-unit
-    h1 About
-    |       
-    p You now have
-    |       
-    ul
-      li HTML5 Boilerplate
-      |         
-      li Sass
-      |         
-      li Modernizr
+  section.mdl-color--fune-primary
+    .mdl-grid.mdl-typography--text-center(data-layout='size-lg')
+      .mdl-cell.mdl-cell--12-col
+        h1.mdl-typography--display-2.ui-padding-vertical-sm About Us     
+  section.mdl-layout
+    .mdl-grid(data-layout='size-lg')
+      .mdl-cell.mdl-cell--6-col.mdl-cell--8-col-tablet
+        h2.mdl-typography--display-3(data-label='left dark md 112')
+          | The 
+          span.block Company          
+      .mdl-cell.mdl-cell--6-col.mdl-cell--8-col-tablet
+        p.ui-margin-top-sm
+          | eziFunerals is Australia&rsquo;s Largest Funeral Planning Service. We are an independent, Australian-owned and operated company,
+          | and are not a subsidiary of any other corporation. We are not part of any other funeral company. We do not conduct
+          | funerals, nor do we receive commissions from Clients final decision-making. Our sole purpose is to provide the information
+          | clients need to make a well-informed decision and get value for money.  
+  section.mdl-layout
+    .p-about-photo     
+  section.mdl-layout
+    .mdl-grid.ui-padding-bottom-lg(data-layout='size-lg')
+      .mdl-cell.mdl-cell--6-col.mdl-cell--8-col-tablet.mdl-cell--order-7-phone.mdl-cell--order-7-tablet
+        p.ui-margin-top-md
+          | eziFunerals was created by Peter and Naomi Erceg following extensive involvement and research into the funeral industry with
+          | a strong desire to help people cope with the funeral process.            
+        p
+          | After meeting and talking to many people, it was clear to us
+          | that coping with death and planning a funeral is one of the most difficult things we will ever be asked to do. It can be
+          | a very challenging and emotional time. What makes it harder is that we are generally unaware of our funeral rights. We don
+          | t know how we can have genuine and meaningful involvement in the funeral process, and we are often unprepared and don t know
+          | what to do when someone close to us dies.             
+        p
+          | People often said to us things like &lsquo;If only we had more information&rsquo;. &lsquo;It all
+          | happened so fast&rdquo;. &lsquo;We had no previous experience to help us &lsquo;. &lsquo;We felt quite vulnerable when the funeral director came
+          | &lsquo;.            
+        p
+          | We understood what people were going through, and the challenges they face following the death of a loved one. It was
+          | clear that there was a need to establish eziFunerals, a fully integrated service to give people the information and support
+          | they need at a very difficult and emotional time.          
+      .mdl-cell.mdl-cell--middle.mdl-cell--6-col.mdl-cell--8-col-tablet.mdl-cell--order-1-phone.mdl-cell--order-1-tablet
+        h2.mdl-typography--display-3.mdl-typography--text-right(data-label='right dark md 112')
+          | Our
+          span.block Story
